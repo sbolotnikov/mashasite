@@ -1,0 +1,40 @@
+.navbar-toggler {
+    border: none;
+    outline:none;
+}
+ .icons {
+    position: relative;
+    display: flex;
+    margin: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+
+
+
+}
+
+#bars{  
+    position: absolute;
+    opacity: 1;
+	top: 0;
+    left: 0;
+    transition: all .3s;
+}
+#closeX{
+    opacity: 0;
+    position: absolute;
+	top: 0;
+    left: 0;
+    transition: all .3s;
+}
+
+
+.defaultHide{
+    transform: rotate(180deg);
+}
+.hoverShow{
+    transform: rotate(0deg) scale(1);
+}
+.nav-link{
+    text-align: center;
+}
