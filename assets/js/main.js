@@ -18,3 +18,5 @@ function changebutton(){
     }
 
 }
+let hight = window.innerHeight;
+let width = window.innerWidth;
