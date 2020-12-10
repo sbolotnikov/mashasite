@@ -1,8 +1,8 @@
 var totalPictures = 39
 var animationArray=[['slower',''],['faster', ''],['slower', 'vertical'],['slower', 'slower-down'],['',''],['slower',''],['faster1',''],['slower', 'slower1'],['',''],['slower', 'slower1'],['faster1','']]
 var windWidth = window.innerWidth;
-$(document).ready(function () {
-    // console.log(doesFileExist("/assets/images/gallery1.webp"))
+window.addEventListener("orientationchange", function(event){startHtml()});
+function startHtml() {
     let childDiv,childImg;
     let node = document.querySelector('.horizontal-scroll');
     for (let i = 1; i <= totalPictures; i++) {
@@ -24,7 +24,7 @@ $(document).ready(function () {
         document.querySelector("#closeX").style.opacity = "0";
         document.querySelector("#bars").style.opacity = "0";
     }
-});
+};
 
 function changebutton() {
     // ≥768px
