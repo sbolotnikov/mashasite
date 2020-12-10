@@ -29,9 +29,10 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link href="//db.onlinewebfonts.com/c/6dd2f2510b4a00a5461b2455928209c2?family=BrandonGrotW01-Light" rel="stylesheet"
     type="text/css" />
+    <link rel="icon" sizes="192x192" href="./assets/images/icon.jpg">  
 </head>
 
-<body onload="startHtml()">
+<body onload="startHtml()" onresize="{location.reload}">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -54,19 +55,19 @@
 
         </div>
         <div class="col-12">
-          <div class="row" style="width:100%; display: flex; justify-content: start;" id="toggledMenu" >
-            <div class="col-12 col-md-3">
+          <div class="row" style=" display: flex; justify-content: start; padding: 0;" id="toggledMenu" >
+            <div class="col-12 col-md-3" style="padding:0">
               <a class="nav-link headerFont" href="tel:030 44041588">030 44041588</a>
             </div>
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-8" style="padding:0">
               <div class="row align-items-start">
-                <div class="col-12 col-md-1"style="padding:0" >
+                <div class="col-12 col-md-auto"style="padding:0" >
                   <a class="nav-link text-dark headerFont" href="#">Home</a>
                 </div>
-                <div class="col-12 col-md-2" style="padding:0">
+                <div class="col-12 col-md-auto" style="padding:0">
                   <a class="nav-link text-dark headerFont" href="#">Contact</a>
                 </div>
-                <div class="col-12 col-md-2" style="padding:0">
+                <div class="col-12 col-md-auto" style="padding:0">
                   <a class="nav-link headerFont " href="#tatoos">Tattoo</a>
                 </div>
                 <div class="col-12 col-md-auto" style="padding:0">
@@ -77,8 +78,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-1" style="padding:0">
-              <ul id="socialMenu" style="text-align: center">
+            <div class="col-12 col-md-1" style="padding:0 ">
+              <ul id="socialMenu" style="display: flex;  justify-content:space-around; width: 100%">
                 <li><a id="map" href="https://www.google.com/maps?cid=3475957935708065149" target="_blank"
                     rel="noopener noreferrer" title="Find on Google Maps">
                     <i class="fas fa-map-marked-alt text-dark"></i></a>
@@ -115,7 +116,22 @@
           </div>
         </div>
       </section>
+ <!-- Modal -->
+ <div class="modal fade" id="myModal" role="dialog" >
+  <div class="modal-dialog"  style="height:100vh; width:100vw; padding:0; margin:0">
 
+      <!-- Modal content-->
+      <div class="modal-content" style="height:100vh; width:100vw; display: flex; justify-content: center; ">
+         
+            <button type="button" class="close" data-dismiss="modal" style="font-size: 9vw; position: absolute; top:0; right:0">&times;</button>
+              <img id="modalIMG" style="height: auto; width:auto; align-self:center;" alt="Gallery picture full resolution">
+
+              <span type="button" id="nextBnt" style="font-size: 9vw; position: absolute; top:50vh; right:0">&#8680</span>
+              <span type="button" id="prevBnt"style="font-size: 9vw; position: absolute; top:50vh; left:0">&#8678</span>
+      </div>
+
+  </div>
+</div>
     </main>
   </div>
 </body>
