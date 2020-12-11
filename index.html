@@ -65,13 +65,13 @@
                   <a class="nav-link text-dark headerFont" href="#">Home</a>
                 </div>
                 <div class="col-12 col-md-auto" style="padding:0">
-                  <a class="nav-link text-dark headerFont" href="#">Contact</a>
+                  <a class="nav-link text-dark headerFont" href="#contact">Contact</a>
                 </div>
                 <div class="col-12 col-md-auto" style="padding:0">
                   <a class="nav-link headerFont " href="#tatoos">Tattoo</a>
                 </div>
                 <div class="col-12 col-md-auto" style="padding:0">
-                  <a class="nav-link text-dark headerFont" href="#">Art work</a>
+                  <a class="nav-link text-dark headerFont" href="#artworks">Art work</a>
                 </div>
                 <div class="col-12 col-md-auto" style="padding:0" >
                   <a class="nav-link text-dark headerFont" href="#">Original Art Work on sale</a>
@@ -111,9 +111,27 @@
       </div>
       <section id="tatoos">
         <div class="external">
-          <div class="horizontal-scroll scroll">
+          <div class="horizontal-scroll" id="tatoosGallery">
 
           </div>
+        </div>
+      </section>
+      <section id="artworks">
+        <div class="external">
+          <div class="horizontal-scroll" id="artworksGallery"></div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="external">
+          <form action=".assets/php/emailform.php" method="post">
+            First Name: <input type="text" name="first_name"><br>
+            Last Name: <input type="text" name="last_name"><br>
+            Email: <input type="text" name="email"><br>
+            Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+            <input type="submit" name="submit" value="Submit">
+            </form>
+
+          
         </div>
       </section>
  <!-- Modal -->

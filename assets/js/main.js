@@ -1,24 +1,10 @@
-var totalPictures = 39
+var totalPictures = 39;
+var totalArtworks=16;
 var animationArray=[['slower',''],['faster', ''],['slower', 'vertical'],['slower', 'slower-down'],['',''],['slower',''],['faster1',''],['slower', 'slower1'],['',''],['slower', 'slower1'],['faster1','']]
 var windWidth = window.innerWidth;
 function startHtml() {
-    let childDiv,childImg;
-    let node = document.querySelector('.horizontal-scroll');
-    for (let i = 1; i <= totalPictures; i++) {
-        childDiv = document.createElement("div");
-        childDiv.classList.add('image-wrapper');
-        if (animationArray[(i-1)%11][0]!=='') childDiv.classList.add(animationArray[(i-1)%11][0]);
-        if (animationArray[(i-1)%11][1]!=='') childDiv.classList.add(animationArray[(i-1)%11][1]);
-        childImg=document.createElement('img');
-        childImg.src = `assets/images/gallery${i}.webp`;
-        childImg.alt = `gallery image number${i}`;
-        childImg.loading='lazy';
-        childImg.setAttribute("onclick",`callModal('gallery',${i},${totalPictures})`);
-        // childImg.setAttribute("data-target","#myModal")
-        childDiv.appendChild(childImg);
-        node.appendChild(childDiv)
-    }
-    childDiv.classList.add("last");
+    fillGallery("tatoos",totalPictures);
+    fillGallery("artworks",totalArtworks);
     if (windWidth<=768) {
         document.querySelector("#toggledMenu").style.display = "none";
         // document.querySelector("#closeX").style.opacity = "0";
@@ -31,6 +17,27 @@ function startHtml() {
         // document.querySelector("#brand").style.opacity = "1";
     }
 };
+function fillGallery(name,picTotal){
+    let childDiv,childImg;
+    let node = document.querySelector('#'+name+"Gallery");
+    for (let i = 1; i <= picTotal; i++) {
+        childDiv = document.createElement("div");
+        childDiv.classList.add('image-wrapper');
+        if (animationArray[(i-1)%11][0]!=='') childDiv.classList.add(animationArray[(i-1)%11][0]);
+        if (animationArray[(i-1)%11][1]!=='') childDiv.classList.add(animationArray[(i-1)%11][1]);
+        childImg=document.createElement('img');
+        childImg.src = `assets/images/${name}/gallery${i}.webp`;
+        childImg.alt = `gallery image number${i}`;
+        childImg.loading='lazy';
+        childImg.setAttribute("onclick",`callModal('${name}/gallery',${i},${picTotal})`);
+        // childImg.setAttribute("data-target","#myModal")
+        childDiv.appendChild(childImg);
+        node.appendChild(childDiv)
+    }
+    childDiv.classList.add("last");
+
+
+}
 function callModal(imgURL,num,total){
     let fileName='assets/images/'+imgURL+num+'.webp';
   
