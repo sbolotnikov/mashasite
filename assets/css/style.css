@@ -8,7 +8,12 @@
     font-style: normal;
   }
 
-
+.main-nav, .notice {
+    background: blue;
+    color:red;
+    border-radius: 5px;
+    box-shadow: gray;
+}
 
 .toggler {
     border: none;
