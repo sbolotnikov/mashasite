@@ -5,9 +5,10 @@ var emailToSend="sergey@time-dance.com";
 // ----------------------------------------------
 
 const images = [
+    "gallery1.webp",
     "215112.jpg",
-    "439741.jpg",
-    "/assets/images/artworks/gallery1.webp"
+    "439741.jpg"
+    
     // "439746.jpg",
 ];
 // const images = [
@@ -27,8 +28,8 @@ rgbKineticSlider = new rgbKineticSlider({
     slideImages: images, // array of images > must be 1920 x 1080
     itemsTitles: texts, // array of titles / subtitles
 
-    backgroundDisplacementSprite: '/assets/images/map-3.jpg', // slide displacement image 
-    cursorDisplacementSprite: '/assets/images/displace-circle.png', // cursor displacement image
+    backgroundDisplacementSprite: 'map-3.jpg', // slide displacement image 
+    cursorDisplacementSprite: 'displace-circle.png', // cursor displacement image
 
     cursorImgEffect : true, // enable cursor effect
     cursorTextEffect : false, // enable cursor text effect
