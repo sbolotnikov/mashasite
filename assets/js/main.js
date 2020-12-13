@@ -8,15 +8,8 @@ const images = [
     "assets/images/artworks/gallery1.webp",
     "assets/images/artworks/gallery2.webp",
     "assets/images/artworks/gallery3.webp"
-    
-    // "439746.jpg",
 ];
-// const images = [
-//     "../assets/images/artworks/gallery1.webp",
-//     "../assets/images/artworks/gallery2.webp",
-//     "../assets/images/artworks/gallery3.webp",
-// ];
-// content setup
+
 const texts = [
     ["Saturn", "ink, pencils, acryl and crystals on paper"],
     ["Flower Fairies", "Ink, colored pencils, acryl, crystals on paper."],

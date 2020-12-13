@@ -44,11 +44,69 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <header>
 
+    <div class="row">
+      <div class="col-12" style=" display:flex; justify-content: center; width:100%">
 
-   
+        <span class="toggler" type="button" style="display: flex; justify-content: start" onclick="changebutton()">
+          <i class="fa fa-bars fa-lg icon-default" id="bars"></i>
+          <i class="fa fa-times fa-lg icon-hover" id="closeX"></i>
+        </span>
 
-      
+        <a href="index.html" style="display: flex; justify-content: center; width: 100%">
+          <img src="./assets/images/mashalogo.webp" alt="navbar-brand" id="brand" style=" width: 30%" />
+        </a>
+
+      </div>
+      <div class="col-12">
+        <div class="row" style=" display: flex; justify-content: center; padding: 0;" id="toggledMenu">
+          <div class="col-12 col-md-auto" style="padding:0">
+            <a class="nav-link headerFont" href="tel:030 44041588">030 44041588</a>
+          </div>
+          <div class="col-12 col-md-8" style="padding:0">
+            <div class="row align-items-start">
+              <div class="col-12 col-md-auto" style="padding:0">
+                <a class="nav-link text-dark headerFont" href="#">Home</a>
+              </div>
+              <div class="col-12 col-md-auto" style="padding:0">
+                <a class="nav-link text-dark headerFont" href='#contact'>Contact</a>
+              </div>
+              <div class="col-12 col-md-auto" style="padding:0">
+                <a class="nav-link headerFont " href="#tatoos">Tattoo</a>
+              </div>
+              <div class="col-12 col-md-auto" style="padding:0">
+                <a class="nav-link text-dark headerFont" href="#artworks">Art work</a>
+              </div>
+              <div class="col-12 col-md-auto" style="padding:0">
+                <a class="nav-link text-dark headerFont" href="sale.html">Original Art Work on sale</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-1" style="padding:0 ">
+            <ul id="socialMenu" style="display: flex;  justify-content:space-around; width: 100%">
+              <li><a id="map" href="https://www.google.com/maps?cid=3475957935708065149" target="_blank"
+                  rel="noopener noreferrer" title="Find on Google Maps">
+                  <i class="fas fa-map-marked-alt text-dark"></i></a>
+              </li>
+              <li><a id="instagram" class="link" href="https://www.instagram.com/malimalia/" target="_blank"
+                  rel="noopener noreferrer" title="Follow on Instagram">
+                  <i class="fab fa-instagram text-dark"></i></a>
+              </li>
+              <li>
+                <a id="facebook" class="link" href="https://www.facebook.com/malimalia221/" target="_blank"
+                  rel="noopener noreferrer" title="Follow on Facebook">
+                  <i class="fab fa-facebook-f text-dark"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <!-- </nav> -->
+
+  </header>   
     <main>
      
       <div class="content">
