@@ -14,7 +14,10 @@ const texts = [
     ["Saturn", "ink, pencils, acryl and crystals on paper"],
     ["Flower Fairies", "Ink, colored pencils, acryl, crystals on paper."],
     ["Lady of Marshland", "for sale! 270 euro, free delivery. watercolor on paper"],
-]
+];
+var animationArray=[['slower',''],['faster', ''],['slower', 'vertical'],['slower', 'slower-down'],['',''],['slower',''],['faster1',''],['slower', 'slower1'],['',''],['slower', 'slower1'],['faster1','']]
+var windWidth = window.innerWidth;
+var windHeight = window.innerHeight;
 
 rgbKineticSlider = new rgbKineticSlider({
 
@@ -66,11 +69,6 @@ rgbKineticSlider = new rgbKineticSlider({
     mobileTextSubTitleOffsetTop : 200, // mobile subtitle offset top
 });
 
-
-
-var animationArray=[['slower',''],['faster', ''],['slower', 'vertical'],['slower', 'slower-down'],['',''],['slower',''],['faster1',''],['slower', 'slower1'],['',''],['slower', 'slower1'],['faster1','']]
-var windWidth = window.innerWidth;
-var windHeight = window.innerHeight;
 function startHtml() {
     fillGallery("tatoos",totalPictures);
     fillGallery("artworks",totalArtworks);
