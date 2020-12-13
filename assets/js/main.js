@@ -7,7 +7,8 @@ var emailToSend="sergey@time-dance.com";
 const images = [
     "215112.jpg",
     "439741.jpg",
-    "439746.jpg",
+    "/assets/images/artworks/gallery1.webp"
+    // "439746.jpg",
 ];
 // const images = [
 //     "../assets/images/artworks/gallery1.webp",
@@ -26,8 +27,8 @@ rgbKineticSlider = new rgbKineticSlider({
     slideImages: images, // array of images > must be 1920 x 1080
     itemsTitles: texts, // array of titles / subtitles
 
-    backgroundDisplacementSprite: '../assets/images/map-3.jpg', // slide displacement image 
-    cursorDisplacementSprite: '../assets/images/displace-circle.png', // cursor displacement image
+    backgroundDisplacementSprite: '/assets/images/map-3.jpg', // slide displacement image 
+    cursorDisplacementSprite: '/assets/images/displace-circle.png', // cursor displacement image
 
     cursorImgEffect : true, // enable cursor effect
     cursorTextEffect : false, // enable cursor text effect
@@ -52,7 +53,7 @@ rgbKineticSlider = new rgbKineticSlider({
     textsDisplay : true, // show title
     textsSubTitleDisplay : true, // show subtitles
     textsTiltEffect : true, // enable text tilt
-    googleFonts : ['brandongrotesque:900', 'brandongrotesque:800'], // select google font to use
+    googleFonts :['brandongrotesque:900', 'brandongrotesque:800'],  //select google font to use
     buttonMode : false, // enable button mode for title
     textsRgbEffect : true, // enable text rgb effect
     textsRgbIntensity : 0.03, // set text rgb intensity
