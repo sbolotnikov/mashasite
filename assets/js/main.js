@@ -22,7 +22,7 @@ rgbKineticSlider = new rgbKineticSlider({
     slideImages: images, // array of images > must be 1920 x 1080
     itemsTitles: texts, // array of titles / subtitles
 
-    backgroundDisplacementSprite: '../assets/images/stripe1.png', // slide displacement image 
+    backgroundDisplacementSprite: '../assets/images/map-3.jpg', // slide displacement image 
     cursorDisplacementSprite: '../assets/images/displace-circle.png', // cursor displacement image
 
     cursorImgEffect : true, // enable cursor effect
