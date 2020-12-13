@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'BrandonGrotesque';
-    src: url('/assets/fonts/BrandonGrotesque-Thin.eot'); /* IE9 Compat Modes */
-    src: url('/assets/fonts/BrandonGrotesque-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/assets/fonts/BrandonGrotesque-Thin.woff') format('woff'), /* Modern Browsers */
-         url('/assets/fonts/BrandonGrotesque-Thin.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-family: 'brandongrotesque';
+    src: url('/assets/fonts/brandongrotesque-thin.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/brandongrotesque-thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/brandongrotesque-thin.woff') format('woff'), /* Modern Browsers */
+         url('/assets/fonts/brandongrotesque-thin.ttf')  format('truetype'); /* Safari, Android, iOS */
          
   }
 
@@ -51,7 +51,7 @@
     text-align: center;
 }
 .headerFont{
-    font-family: BrandonGrotesque, sans-serif;
+    font-family: brandonbrotesque, sans-serif;
     text-align: center;
     font-size: auto;
     color:black;
@@ -181,7 +181,7 @@ ul#socialMenu li{
     top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: BrandonGrotesque, sans-serif;
+    font-family: brandongrotesque, sans-serif;
     font-size: 28px;
     z-index: 10;
     color: white;
