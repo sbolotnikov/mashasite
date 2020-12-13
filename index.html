@@ -65,7 +65,7 @@
                   <a class="nav-link text-dark headerFont" href="#">Home</a>
                 </div>
                 <div class="col-12 col-md-auto" style="padding:0">
-                  <a class="nav-link text-dark headerFont" href='contact'>Contact</a>
+                  <a class="nav-link text-dark headerFont" href='#contact'>Contact</a>
                 </div>
                 <div class="col-12 col-md-auto" style="padding:0">
                   <a class="nav-link headerFont " href="#tatoos">Tattoo</a>
@@ -123,11 +123,11 @@
       </section>
       <section id="contact">
         <div class="external">
-          <form action=".assets/php/emailform.php" method="post">
+          <form action="https://www.nicholaslamonaco.com/mashasite/emailform.php" method="post">
             First Name: <input type="text" name="first_name"><br>
             Last Name: <input type="text" name="last_name"><br>
-            Email: <input type="text" name="email"><br>
-            Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+            Email: <input type="email" name="email"><br>
+            Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>   
             <input type="submit" name="submit" value="Submit">
             </form>
 
@@ -142,7 +142,7 @@
       <div class="modal-content" style="height:100vh; width:100vw; display: flex; justify-content: center; ">
          
             <button type="button" class="close" data-dismiss="modal" style="font-size: 9vw; position: absolute; top:0; right:0">&times;</button>
-              <img id="modalIMG" style="height: auto; width:auto; align-self:center;" alt="Gallery picture full resolution">
+              <img id="modalIMG" style="align-self:center;" alt="Gallery picture full resolution">
 
               <span type="button" id="nextBnt" style="font-size: 9vw; position: absolute; top:50vh; right:0">&#8680</span>
               <span type="button" id="prevBnt"style="font-size: 9vw; position: absolute; top:50vh; left:0">&#8678</span>

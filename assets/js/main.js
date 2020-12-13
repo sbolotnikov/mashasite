@@ -2,6 +2,7 @@ var totalPictures = 39;
 var totalArtworks=16;
 var animationArray=[['slower',''],['faster', ''],['slower', 'vertical'],['slower', 'slower-down'],['',''],['slower',''],['faster1',''],['slower', 'slower1'],['',''],['slower', 'slower1'],['faster1','']]
 var windWidth = window.innerWidth;
+var windHeight = window.innerHeight;
 function startHtml() {
     fillGallery("tatoos",totalPictures);
     fillGallery("artworks",totalArtworks);
@@ -42,7 +43,19 @@ function callModal(imgURL,num,total){
     let fileName='assets/images/'+imgURL+num+'.webp';
   
     if ((num>0)&&(num<=total)){
-    document.querySelector('#modalIMG').src=fileName;
+        let image1=document.querySelector('#modalIMG');
+    image1.src=fileName;
+    let imgHeight=image1.naturalHeight;
+    let imgWidth=image1.naturalWidth;
+    console.log(imgHeight, imgWidth)
+    if (((windWidth>=windHeight)&&(imgWidth<=imgHeight))||(((windWidth>=windHeight)&&(imgWidth>imgHeight))&&(windHeight/windWidth>imgHeight/imgWidth))
+    ||(((windWidth<windHeight)&&(imgWidth<imgHeight))&&(windHeight/windWidth<imgHeight/imgWidth))){
+        image1.style.height=Math.floor(windHeight*.9)+'px';
+        image1.style.width='auto';
+    }else{
+        image1.style.width=Math.floor(windWidth*.9)+'px';
+        image1.style.height='auto';
+    }
     document.querySelector('#nextBnt').setAttribute("onclick",`callModal('${imgURL}',${num+1},${total})`);
     document.querySelector('#prevBnt').setAttribute("onclick",`callModal('${imgURL}',${num-1},${total})`);
     $('#myModal').modal('show');
@@ -70,5 +83,5 @@ function changebutton() {
     }
 
 }
-let hight = window.innerHeight;
+
 
