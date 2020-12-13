@@ -13,7 +13,7 @@ var texts1 = [
 
 
 
-var text=[];
+var texts=[];
 var images = [];
 var animationArray = [['slower', ''], ['faster', ''], ['slower', 'vertical'], ['slower', 'slower-down'], ['', ''], ['slower', ''], ['faster1', ''], ['slower', 'slower1'], ['', ''], ['slower', 'slower1'], ['faster1', '']]
 var windWidth = window.innerWidth;
