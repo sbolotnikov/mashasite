@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'brandongrotesque';
-    src: url('/assets/fonts/brandongrotesque-thin.eot'); /* IE9 Compat Modes */
-    src: url('/assets/fonts/brandongrotesque-thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/assets/fonts/brandongrotesque-thin.woff') format('woff'), /* Modern Browsers */
-         url('/assets/fonts/brandongrotesque-thin.ttf')  format('truetype'); /* Safari, Android, iOS */
+    src: url('/assets/fonts/brandongrotesque.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/brandongrotesque.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/brandongrotesque.woff') format('woff'), /* Modern Browsers */
+         url('/assets/fonts/brandongrotesque.ttf')  format('truetype'); /* Safari, Android, iOS */
          
   }
 
