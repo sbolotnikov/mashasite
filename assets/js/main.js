@@ -5,11 +5,15 @@ var emailToSend="sergey@time-dance.com";
 // ----------------------------------------------
 
 const images = [
-    "../assets/images/artworks/gallery1.webp",
-    "../assets/images/artworks/gallery2.webp",
-    "../assets/images/artworks/gallery3.webp",
+    "../assets/images/215112.jpg",
+    "../assets/images/439741.jpg",
+    "../assets/images/439746.jpg",
 ];
-
+// const images = [
+//     "../assets/images/artworks/gallery1.webp",
+//     "../assets/images/artworks/gallery2.webp",
+//     "../assets/images/artworks/gallery3.webp",
+// ];
 // content setup
 const texts = [
     ["Saturn", "ink, pencils, acryl and crystals on paper"],
