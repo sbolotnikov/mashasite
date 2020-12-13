@@ -5,9 +5,9 @@ var emailToSend="sergey@time-dance.com";
 // ----------------------------------------------
 
 const images = [
-    "/assets/images/artworks/gallery1.webp",
-    "/assets/images/artworks/gallery2.webp",
-    "/assets/images/artworks/gallery3.webp"
+    "assets/images/artworks/gallery1.webp",
+    "assets/images/artworks/gallery2.webp",
+    "assets/images/artworks/gallery3.webp"
     
     // "439746.jpg",
 ];
