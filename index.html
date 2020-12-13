@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link href="//db.onlinewebfonts.com/c/6dd2f2510b4a00a5461b2455928209c2?family=BrandonGrotW01-Light" rel="stylesheet"
     type="text/css" />
-    <link rel="icon" sizes="192x192" href="./assets/images/icon.jpg">  
+  <link rel="icon" sizes="192x192" href="./assets/images/icon.jpg">
 </head>
 
 <body onload="startHtml()" onresize="{location.reload}">
@@ -43,25 +43,25 @@
 
       <div class="row">
         <div class="col-12" style=" display:flex; justify-content: center; width:100%">
-          
-            <span class="toggler" type="button" style="display: flex; justify-content: start" onclick="changebutton()">
-                <i class="fa fa-bars fa-lg icon-default" id="bars"></i>
-                <i class="fa fa-times fa-lg icon-hover" id="closeX"></i>
-            </span>
-          
+
+          <span class="toggler" type="button" style="display: flex; justify-content: start" onclick="changebutton()">
+            <i class="fa fa-bars fa-lg icon-default" id="bars"></i>
+            <i class="fa fa-times fa-lg icon-hover" id="closeX"></i>
+          </span>
+
           <a href="index.html" style="display: flex; justify-content: center; width: 100%">
             <img src="./assets/images/mashalogo.webp" alt="navbar-brand" id="brand" style=" width: 30%" />
           </a>
 
         </div>
         <div class="col-12">
-          <div class="row" style=" display: flex; justify-content: start; padding: 0;" id="toggledMenu" >
-            <div class="col-12 col-md-3" style="padding:0">
+          <div class="row" style=" display: flex; justify-content: center; padding: 0;" id="toggledMenu">
+            <div class="col-12 col-md-auto" style="padding:0">
               <a class="nav-link headerFont" href="tel:030 44041588">030 44041588</a>
             </div>
             <div class="col-12 col-md-8" style="padding:0">
               <div class="row align-items-start">
-                <div class="col-12 col-md-auto"style="padding:0" >
+                <div class="col-12 col-md-auto" style="padding:0">
                   <a class="nav-link text-dark headerFont" href="#">Home</a>
                 </div>
                 <div class="col-12 col-md-auto" style="padding:0">
@@ -73,7 +73,7 @@
                 <div class="col-12 col-md-auto" style="padding:0">
                   <a class="nav-link text-dark headerFont" href="#artworks">Art work</a>
                 </div>
-                <div class="col-12 col-md-auto" style="padding:0" >
+                <div class="col-12 col-md-auto" style="padding:0">
                   <a class="nav-link text-dark headerFont" href="#">Original Art Work on sale</a>
                 </div>
               </div>
@@ -122,34 +122,86 @@
         </div>
       </section>
       <section id="contact">
-        <div class="external">
-          <form action="https://www.nicholaslamonaco.com/mashasite/emailform.php" method="post">
-            First Name: <input type="text" name="first_name"><br>
-            Last Name: <input type="text" name="last_name"><br>
-            Email: <input type="email" name="email"><br>
-            Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>   
-            <input type="submit" name="submit" value="Submit">
-            </form>
+        <div class="form-wrapper">
+          <form action=".assets/php/emailform.php" method="post" style="width:70%;margin:auto">
+            <!-- <form action="https://www.time-dance.com/emailform.php" method="post"> -->
+            <!-- <form action="https://www.nicholaslamonaco.com/mashasite/emailform.php" method="post">   -->
+            <label for="first_name">First name:</label><br>
+            <input class="form-input" type="text" name="first_name" style="width:94%" ><br>
+            <label for="last_name">Last name:</label><br>
+            <input class="form-input" type="text" name="last_name"style="width:94%" ><br>
+            <label for="address">Address:</label><br>
+            <div class="input-group form-input">
+              <div class="input-group-prepend" >
+                <span class="input-group-text" id="addressPrepend"><i class="fa fa-home"  aria-hidden="true"></i></span>
+              </div>
+              <textarea rows="3" type="address" name="address" style="width:87%" required> </textarea>
+            </div>
+            <label for="email">Email:</label><br>
+            <div class="input-group form-input">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="emailPrepend"><i class="fa fa-envelope"  aria-hidden="true"></i></span>
+              </div>
+              <input type="email" name="email" style="width:87%" placeholder="For example: name@server.com" required>
+            </div>
+            <label for="phone">Phone:</label><br>
+            <div class="input-group form-input">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="phonePrepend"><i class="fa fa-phone"  aria-hidden="true"></i></span>
+              </div>
+              <input type="tel" name="phone" style="width:87%" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" required><br>
+            </div>
+            <label for="message">Message:</label><br>
+            <textarea class="form-input" rows="5" name="message" style="width:94%" required></textarea><br><br><br>
+            <input id="sendto" type="text" name="to" style="display:none">
 
-          
+            <button type="submit" name="submit" value="Submit" class="transparentBtn">
+              <!-- <button type="submit" name="submit" value="Submit" style="background-color: transparent; color: transparent; border:transparent">   -->
+              <div class="liqudButton">
+                <span class="btnText">Submit</span>
+                <div class="blurred">
+                  <span></span><span></span>
+                </div>
+              </div>
+            </button>
+            <br>
+            <br>
+          </form>
+
         </div>
       </section>
- <!-- Modal -->
- <div class="modal fade" id="myModal" role="dialog" >
-  <div class="modal-dialog"  style="height:100vh; width:100vw; padding:0; margin:0">
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog" style="height:100vh; width:100vw; padding:0; margin:0">
 
-      <!-- Modal content-->
-      <div class="modal-content" style="height:100vh; width:100vw; display: flex; justify-content: center; ">
-         
-            <button type="button" class="close" data-dismiss="modal" style="font-size: 9vw; position: absolute; top:0; right:0">&times;</button>
-              <img id="modalIMG" style="align-self:center;" alt="Gallery picture full resolution">
+          <!-- Modal content-->
+          <div class="modal-content" style="height:100vh; width:100vw; display: flex; justify-content: center; ">
 
-              <span type="button" id="nextBnt" style="font-size: 9vw; position: absolute; top:50vh; right:0">&#8680</span>
-              <span type="button" id="prevBnt"style="font-size: 9vw; position: absolute; top:50vh; left:0">&#8678</span>
+            <button type="button" class="close" data-dismiss="modal"
+              style="font-size: 9vw; position: absolute; top:0; right:0">&times;</button>
+            <img id="modalIMG" style="align-self:center;" alt="Gallery picture full resolution">
+
+            <span type="button" id="nextBnt"
+              style="font-size: 6.5vw; position: absolute; top:50vh; right:0">&#8680</span>
+            <span type="button" id="prevBnt"
+              style="font-size: 6.5vw; position: absolute; top:50vh; left:0">&#8678</span>
+          </div>
+
+        </div>
       </div>
-
-  </div>
-</div>
     </main>
   </div>
+
+  <svg>
+    <defs>
+      <filter id='goo'>
+        <feGaussianBlur in='SourceGraphic' stdDeviation='10' result='name' />
+        <feColorMatrix in='name' mode='matrix' values='1 0 0 0 0
+                   0 1 0 0 0 
+                   0 0 1 0 0
+                   0 0 0 30 -15 ' result='aab' />
+        <feBlend in='SourceGraphic' in2='aab' />
+      </filter>
+    </defs>
+  </svg>
 </body>
