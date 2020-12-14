@@ -98,9 +98,38 @@ function fillGallery(name, picTotal) {
         node.appendChild(childDiv)
     }
     childDiv.classList.add("last");
+}
+
+function emailSend(event){
+    event.preventDefault();
+    let subject = "Form submission";
+    let subject2 = "Copy of your form submission";
+    let first_name=document.getElementById("first-name").value;
+    let last_name=document.getElementById("last-name").value;
+    let address=document.getElementById("address").value;
+    let phone=document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let message= document.getElementById("message").value;
+    message = `${first_name}  ${last_name} Address: ${address} \n Phone: ${phone} /\n/ wrote the following: \n\n ${message}`;
+    let message2 = `Here is a copy of your message  ${first_name} \n \n ${message}`
+    let mailto_link = 'mailto:' + emailToSend + '?subject=' + subject + '&body=' + message;
+    let mailto_link2 = 'mailto:' + email + '?subject=' + subject2 + '&body=' + message2;
+    win = window.open(mailto_link, 'emailWindow');
+    if (win && win.open && !win.closed){
+        console.log("sent email"); 
+        win.close();
+        win = window.open(mailto_link2, 'emailWindow');
+        if (win && win.open && !win.closed){console.log("sent second email");  win.close();}
+    }
+   location.reload();
+
+
+
+
 
 
 }
+
 function callModal(imgURL, num, total) {
     // let fileName='assets/images/'+imgURL+num+'.webp';
     // if ((num>0)&&(num<=total)){
