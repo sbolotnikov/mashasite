@@ -28,19 +28,21 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="icon" sizes="192x192" href="./assets/images/icon.jpg">
 
+  <link rel="stylesheet" href="assets/css/blog.css" />
+
   <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/base.css" />
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-    <!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
-    <script src="assets/js/libs/imagesLoaded.pkgd.min.js"></script>
-		<script src="assets/js/libs/pixi.min.js"></script>
-		<script src="assets/js/libs/pixi-filters.min.js"></script>
-		<script src="assets/js/libs/TweenMax.min.js"></script>
-		<script src="assets/js/rgbKineticSlider.js"></script>  
+  <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+  <!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+  <script src="assets/js/libs/imagesLoaded.pkgd.min.js"></script>
+  <script src="assets/js/libs/pixi.min.js"></script>
+  <script src="assets/js/libs/pixi-filters.min.js"></script>
+  <script src="assets/js/libs/TweenMax.min.js"></script>
+  <script src="assets/js/rgbKineticSlider.js"></script>
 </head>
 
 <body onload="startHtml()" onresize="{location.reload}">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
@@ -110,12 +112,21 @@
 
     </header>
     <main>
-      <div class="jumbotron"
-        style=" margin-top: 10vh; font-family: brandongrotesque, sans-serif; text-align: center">
-        <h1 style="font-size: 9vw">MARIA KOROLEVA</h1>
-        <h4 style="font-size: 7vw;">Tattoo Artist, Berlin</h4>
-
+      <div class="jumbotron" style="color:black; margin-top: 10vh; font-family: brandongrotesque, sans-serif; text-align: center">
+        <h1 style="font-size: 6vw">MARIA KOROLEVA</h1>
+        <h4 style="font-size: 2vw;">Tattoo Artist, Berlin</h4>
       </div>
+
+
+
+      <section id="news">
+        <h4 style="font-size: 3vw; color:black;font-weight: 800; font-family: brandongrotesque, sans-serif; text-align: center">NEWS</h4>
+        <div class="wrap" id="blog">
+
+        </div>
+      </section>
+
+
       <section id="tatoos">
         <div class="external">
           <div class="horizontal-scroll" id="tatoosGallery">
@@ -134,29 +145,31 @@
             <!-- <form action="https://www.time-dance.com/emailform.php" method="post"> -->
             <!-- <form action="https://www.nicholaslamonaco.com/mashasite/emailform.php" method="post">   -->
             <label for="first_name">First name:</label><br>
-            <input class="form-input" type="text" name="first_name" style="width:94%" ><br>
+            <input class="form-input" type="text" name="first_name" style="width:94%"><br>
             <label for="last_name">Last name:</label><br>
-            <input class="form-input" type="text" name="last_name"style="width:94%" ><br>
+            <input class="form-input" type="text" name="last_name" style="width:94%"><br>
             <label for="address">Address:</label><br>
             <div class="input-group form-input">
-              <div class="input-group-prepend" >
-                <span class="input-group-text" id="addressPrepend"><i class="fa fa-home"  aria-hidden="true"></i></span>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="addressPrepend"><i class="fa fa-home" aria-hidden="true"></i></span>
               </div>
               <textarea rows="3" type="address" name="address" style="width:87%" required> </textarea>
             </div>
             <label for="email">Email:</label><br>
             <div class="input-group form-input">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="emailPrepend"><i class="fa fa-envelope"  aria-hidden="true"></i></span>
+                <span class="input-group-text" id="emailPrepend"><i class="fa fa-envelope"
+                    aria-hidden="true"></i></span>
               </div>
               <input type="email" name="email" style="width:87%" placeholder="For example: name@server.com" required>
             </div>
             <label for="phone">Phone:</label><br>
             <div class="input-group form-input">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="phonePrepend"><i class="fa fa-phone"  aria-hidden="true"></i></span>
+                <span class="input-group-text" id="phonePrepend"><i class="fa fa-phone" aria-hidden="true"></i></span>
               </div>
-              <input type="tel" name="phone" style="width:87%" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" required><br>
+              <input type="tel" name="phone" style="width:87%" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="Format: 123-456-7890" required><br>
             </div>
             <label for="message">Message:</label><br>
             <textarea class="form-input" rows="5" name="message" style="width:94%" required></textarea><br><br><br>
@@ -174,7 +187,15 @@
             <br>
             <br>
           </form>
-
+          <button class="transparentBtn">
+            <!-- <button type="submit" name="submit" value="Submit" style="background-color: transparent; color: transparent; border:transparent">   -->
+            <div class="liqudButton">
+              <span class="btnText">Contact</span>
+              <div class="blurred">
+                <span></span><span></span>
+              </div>
+            </div>
+          </button>
         </div>
       </section>
       <!-- Modal -->
@@ -184,17 +205,17 @@
           <!-- Modal content-->
           <div class="modal-content" style="height:100vh; width:100vw; ">
 
-              <div class="content">
-                <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
-                <nav>
-                      <a href="#" class="main-nav prev" data-nav="previous">Prev <span></span></a>
-                      <a href="#" class="main-nav next" data-nav="next">Next <span></span></a>
-                        </nav>
-                        <span class="notice" onclick="location.reload()">Close &times;</span>
-              </div>
+            <div class="content">
+              <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+              <nav>
+                <a href="#" class="main-nav prev" data-nav="previous">Prev <span></span></a>
+                <a href="#" class="main-nav next" data-nav="next">Next <span></span></a>
+              </nav>
+              <span class="notice" onclick="location.reload()">Close &times;</span>
+            </div>
 
 
-<!-- 
+            <!-- 
 
 
 

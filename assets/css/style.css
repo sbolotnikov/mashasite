@@ -169,13 +169,12 @@ ul#socialMenu li{
     background-color: transparent;
     color: transparent; 
     border:transparent; 
-    box-shadow: transparent; 
+    outline: none;
 }
 .transparentBtn:focus, :active {
     background-color: transparent;
     color: transparent; 
-    border:transparent; 
-    box-shadow: transparent; 
+    outline:none;
 }
 .liqudButton {
     position: relative;

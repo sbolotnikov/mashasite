@@ -10,16 +10,21 @@ var texts1 = [
     ["Lady of Marshland", "for sale! 270 euro, free delivery. watercolor on paper"],
 ];
 
+var blog = [
+["WORKING AT LOXODROM, BERLIN","","I'm working at Loxodrom Tattoo Studio in Berlin most of the time. Please contact me via Facebook, Instagram, this site or by making appointment in Loxodrom directly."],
+["ORIGINAL ART WORKS FOR SALE!","<a href='https://www.etsy.com/shop/MariaKorolevaArt?ref=seller-platform-mcnav'>Etsy store</a>","I would like to offer some of my original paintings and drawings for sale. You can find them all with the prices in the Art Gallery. Also you can order original art prints from my <a href='https://malimalia.bigcartel.com'>malimalia.bigcartel.com</a>"],
+["GUEST SPOT IN ANDY'S BODY ELECTRIC TATTOO","","I will be working as a guest artist in <a href='https://www.andysbodyelectric.de'>Andy's Body Electric Tattoo</a>. In Willich. For any inquiries please contact the studio."] 
+];
 
 
-
-var texts=[];
+var texts = [];
 var images = [];
 var animationArray = [['slower', ''], ['faster', ''], ['slower', 'vertical'], ['slower', 'slower-down'], ['', ''], ['slower', ''], ['faster1', ''], ['slower', 'slower1'], ['', ''], ['slower', 'slower1'], ['faster1', '']]
 var windWidth = window.innerWidth;
 var windHeight = window.innerHeight;
 
 function startHtml() {
+    fillBlog();
     fillGallery("tatoos", totalPictures);
     fillGallery("artworks", totalArtworks);
     if (windWidth <= 768) {
@@ -35,6 +40,46 @@ function startHtml() {
     }
     document.getElementById('sendto').defaultValue = emailToSend;
 };
+
+function fillBlog() {
+    let parentElement = document.querySelector('#blog');
+    let childBlog,childDiv,subDiv,spanDiv, childImg;
+    for (let i = 0; i < blog.length; i++) {
+        childBlog = document.createElement("div");
+        childBlog.classList.add('tile');
+        childImg = document.createElement('img');
+        childImg.src = `assets/images/news/image${i+1}.webp`;
+        childImg.alt = `blog image number ${i+1}`;
+        childBlog.appendChild(childImg);
+
+        childDiv = document.createElement("div");
+        childDiv.classList.add('text');
+        subDiv= document.createElement("h1");
+        subDiv.innerHTML=blog[i][0];
+        childDiv.appendChild(subDiv);
+        subDiv= document.createElement("h2");
+        subDiv.classList.add('animate-text');
+        subDiv.innerHTML=blog[i][1];
+        childDiv.appendChild(subDiv);
+        subDiv= document.createElement("p");
+        subDiv.classList.add('animate-text');
+        subDiv.innerHTML=blog[i][2];
+        childDiv.appendChild(subDiv);
+        subDiv = document.createElement("div");
+        subDiv.classList.add('dots');
+        spanDiv= document.createElement("span");
+        subDiv.appendChild(spanDiv);
+        subDiv.appendChild(spanDiv);
+        subDiv.appendChild(spanDiv);
+        childDiv.appendChild(subDiv);
+        childBlog.appendChild(childDiv);
+        parentElement.appendChild(childBlog);
+    }
+}
+
+
+
+
 function fillGallery(name, picTotal) {
     let childDiv, childImg;
     let node = document.querySelector('#' + name + "Gallery");
@@ -76,7 +121,7 @@ function callModal(imgURL, num, total) {
     images = [];
     for (let i = num; i <= total; i++) { images.push('assets/images/' + imgURL + i + '.webp') }
     for (i = 1; i < num; i++) { images.push('assets/images/' + imgURL + i + '.webp') }
-     rgbKineticSlider = new rgbKineticSlider({
+    rgbKineticSlider = new rgbKineticSlider({
 
         slideImages: images, // array of images > must be 1920 x 1080
         itemsTitles: texts, // array of titles / subtitles
