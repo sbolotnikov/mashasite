@@ -29,14 +29,14 @@ function startHtml() {
     fillGallery("artworks", totalArtworks);
     if (windWidth <= 768) {
         document.querySelector("#toggledMenu").style.display = "none";
-        // document.querySelector("#closeX").style.opacity = "0";
-        // document.querySelector("#bars").style.opacity = "1";
-        // document.querySelector("#brand").style.opacity = "1";
+        document.querySelector("#closeX").style.opacity = "0";
+        document.querySelector("#bars").style.opacity = "1";
+        document.querySelector("#brand").style.opacity = "1";
     } else {
         document.querySelector("#closeX").style.opacity = "0";
         document.querySelector("#bars").style.opacity = "0";
-        // document.querySelector("#toggledMenu").style.display = "block";
-        // document.querySelector("#brand").style.opacity = "1";
+        document.querySelector("#toggledMenu").style.display = "block";
+        document.querySelector("#brand").style.opacity = "1";
     }
     document.getElementById('sendto').defaultValue = emailToSend;
 };
