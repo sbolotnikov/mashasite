@@ -8,12 +8,25 @@ var texts1 = [
     ["Saturn", "ink, pencils, acryl and crystals on paper"],
     ["Flower Fairies", "Ink, colored pencils, acryl, crystals on paper."],
     ["Lady of Marshland", "for sale! 270 euro, free delivery. watercolor on paper"],
+    ["Lady of Marshland", "watercolor on paper"],
+    ["Tamerlan","For sale! 200euro, free delivery"],
+    ["Fae. Original for sale!", "50 euro, free delivery. Colored pencils on paper"],
+    ["Summer day. Original for sale!","120 euro, free delivery. watercolor on paper"],
+    ["Diving with mermaids", "Digital art"],
+    [`"She was a catch" Original for sale! 200 euro`,"Free delivery! ink, colored pencils, acryl and crystals on paper"],
+    ["Spring", "Digital art"],
+    ["in China","oil on canvas"],
+    ["Western wind", " "],
+    ["Spring evening. For sale! 350 euro", "Free delivery. Watercolor and pencils on paper"],
+    ["The Star", "ink, colored pencils, acryl and crystals in paper"],
+    ["Gethsemane Garden.", "oil on canvas"],
+    ["Sarah Jane"," "]
 ];
 
 var blog = [
-["WORKING AT LOXODROM, BERLIN","","I'm working at Loxodrom Tattoo Studio in Berlin most of the time. Please contact me via Facebook, Instagram, this site or by making appointment in Loxodrom directly."],
-["ORIGINAL ART WORKS FOR SALE!","<a href='https://www.etsy.com/shop/MariaKorolevaArt?ref=seller-platform-mcnav'>Etsy store</a>","I would like to offer some of my original paintings and drawings for sale. You can find them all with the prices in the Art Gallery. Also you can order original art prints from my <a href='https://malimalia.bigcartel.com'>malimalia.bigcartel.com</a>"],
-["GUEST SPOT IN ANDY'S BODY ELECTRIC TATTOO","","I will be working as a guest artist in <a href='https://www.andysbodyelectric.de'>Andy's Body Electric Tattoo</a>. In Willich. For any inquiries please contact the studio."] 
+    ["WORKING AT LOXODROM, BERLIN", "", "I'm working at Loxodrom Tattoo Studio in Berlin most of the time. Please contact me via Facebook, Instagram, this site or by making appointment in Loxodrom directly."],
+    ["ORIGINAL ART WORKS FOR SALE!", "<a href='https://www.etsy.com/shop/MariaKorolevaArt?ref=seller-platform-mcnav'>Etsy store</a>", "I would like to offer some of my original paintings and drawings for sale. You can find them all with the prices in the Art Gallery. Also you can order original art prints from my <a href='https://malimalia.bigcartel.com'>malimalia.bigcartel.com</a>"],
+    ["GUEST SPOT IN ANDY'S BODY ELECTRIC TATTOO", "", "I will be working as a guest artist in <a href='https://www.andysbodyelectric.de'>Andy's Body Electric Tattoo</a>. In Willich. For any inquiries please contact the studio."]
 ];
 
 
@@ -25,8 +38,8 @@ var windHeight = window.innerHeight;
 
 function startHtml() {
     fillBlog();
-    fillGallery("tatoos", totalPictures);
-    fillGallery("artworks", totalArtworks);
+    fillGallery("tatoos", totalPictures, 1);
+    fillGallery("artworks", totalArtworks, 0);
     if (windWidth <= 768) {
         document.querySelector("#toggledMenu").style.display = "none";
         document.querySelector("#closeX").style.opacity = "0";
@@ -43,31 +56,31 @@ function startHtml() {
 
 function fillBlog() {
     let parentElement = document.querySelector('#blog');
-    let childBlog,childDiv,subDiv,spanDiv, childImg;
+    let childBlog, childDiv, subDiv, spanDiv, childImg;
     for (let i = 0; i < blog.length; i++) {
         childBlog = document.createElement("div");
         childBlog.classList.add('tile');
         childImg = document.createElement('img');
-        childImg.src = `assets/images/news/image${i+1}.webp`;
-        childImg.alt = `blog image number ${i+1}`;
+        childImg.src = `assets/images/news/image${i + 1}.webp`;
+        childImg.alt = `blog image number ${i + 1}`;
         childBlog.appendChild(childImg);
 
         childDiv = document.createElement("div");
         childDiv.classList.add('text');
-        subDiv= document.createElement("h1");
-        subDiv.innerHTML=blog[i][0];
+        subDiv = document.createElement("h1");
+        subDiv.innerHTML = blog[i][0];
         childDiv.appendChild(subDiv);
-        subDiv= document.createElement("h2");
+        subDiv = document.createElement("h2");
         subDiv.classList.add('animate-text');
-        subDiv.innerHTML=blog[i][1];
+        subDiv.innerHTML = blog[i][1];
         childDiv.appendChild(subDiv);
-        subDiv= document.createElement("p");
+        subDiv = document.createElement("p");
         subDiv.classList.add('animate-text');
-        subDiv.innerHTML=blog[i][2];
+        subDiv.innerHTML = blog[i][2];
         childDiv.appendChild(subDiv);
         subDiv = document.createElement("div");
         subDiv.classList.add('dots');
-        spanDiv= document.createElement("span");
+        spanDiv = document.createElement("span");
         subDiv.appendChild(spanDiv);
         subDiv.appendChild(spanDiv);
         subDiv.appendChild(spanDiv);
@@ -80,48 +93,75 @@ function fillBlog() {
 
 
 
-function fillGallery(name, picTotal) {
+function fillGallery(name, picTotal, animateOrigin) {
     let childDiv, childImg;
     let node = document.querySelector('#' + name + "Gallery");
+
     for (let i = 1; i <= picTotal; i++) {
         childDiv = document.createElement("div");
-        childDiv.classList.add('image-wrapper');
-        if (animationArray[(i - 1) % 11][0] !== '') childDiv.classList.add(animationArray[(i - 1) % 11][0]);
-        if (animationArray[(i - 1) % 11][1] !== '') childDiv.classList.add(animationArray[(i - 1) % 11][1]);
+        
         childImg = document.createElement('img');
-        childImg.classList.add('gallery-image');
+        
+        if (animateOrigin === 1) {
+            childImg.classList.add('gallery-image');
+            childDiv.classList.add('image-wrapper');
+            if (animationArray[(i - 1) % 11][0] !== '') childDiv.classList.add(animationArray[(i - 1) % 11][0]);
+            if (animationArray[(i - 1) % 11][1] !== '') childDiv.classList.add(animationArray[(i - 1) % 11][1]);
+            
+        }else{
+            childDiv.classList.add('slide');
+            childImg.classList.add('continue-scroll');
+        }
+        
+        
         childImg.src = `assets/images/${name}/gallery${i}.webp`;
         childImg.alt = `gallery image number${i}`;
-        childImg.loading = 'lazy';
+        // childImg.loading = 'lazy';
         childImg.setAttribute("onclick", `callModal('${name}/gallery',${i},${picTotal})`);
         childDiv.appendChild(childImg);
         node.appendChild(childDiv)
     }
-    childDiv.classList.add("last");
+    if (animateOrigin === 1){
+         childDiv.classList.add("last");
+    } 
 }
-
-function emailSend(event){
+function removeAnime(event){
+    // event.preventDefault();
+    // let node=event.target.firstChild;
+    // node.firstChild.classList.remove("continue-scroll");
+    // let node1=node.nextSibling;
+    // let i=1;
+    // while ((node1!==null)&&(i<40)){
+    //     node1.firstChild.classList.remove("continue-scroll");
+    //     node1=node.nextSibling;
+    //     console.log(i++)
+    // }
+    // .forEach(function(el){el.firstElementChild.classList.remove("continue-scroll")});
+    
+    // anim.classList.remove("continue-scroll");
+}
+function emailSend(event) {
     event.preventDefault();
     let subject = "Form submission";
     let subject2 = "Copy of your form submission";
-    let first_name=document.getElementById("first-name").value;
-    let last_name=document.getElementById("last-name").value;
-    let address=document.getElementById("address").value;
-    let phone=document.getElementById("phone").value;
+    let first_name = document.getElementById("first-name").value;
+    let last_name = document.getElementById("last-name").value;
+    let address = document.getElementById("address").value;
+    let phone = document.getElementById("phone").value;
     let email = document.getElementById("email").value;
-    let message= document.getElementById("message").value;
+    let message = document.getElementById("message").value;
     message = `${first_name}  ${last_name} Address: ${address} \n Phone: ${phone} /\n/ wrote the following: \n\n ${message}`;
     let message2 = `Here is a copy of your message  ${first_name} \n \n ${message}`
     let mailto_link = 'mailto:' + emailToSend + '?subject=' + subject + '&body=' + message;
     let mailto_link2 = 'mailto:' + email + '?subject=' + subject2 + '&body=' + message2;
     win = window.open(mailto_link, 'emailWindow');
-    if (win && win.open && !win.closed){
-        console.log("sent email"); 
+    if (win && win.open && !win.closed) {
+        console.log("sent email");
         win.close();
         win = window.open(mailto_link2, 'emailWindow');
-        if (win && win.open && !win.closed){console.log("sent second email");  win.close();}
+        if (win && win.open && !win.closed) { console.log("sent second email"); win.close(); }
     }
-   location.reload();
+    location.reload();
 
 
 
@@ -148,8 +188,19 @@ function callModal(imgURL, num, total) {
     // document.querySelector('#nextBnt').setAttribute("onclick",`callModal('${imgURL}',${num+1},${total})`);
     // document.querySelector('#prevBnt').setAttribute("onclick",`callModal('${imgURL}',${num-1},${total})`);
     images = [];
-    for (let i = num; i <= total; i++) { images.push('assets/images/' + imgURL + i + '.webp') }
-    for (i = 1; i < num; i++) { images.push('assets/images/' + imgURL + i + '.webp') }
+    texts=[];
+    for (let i = num; i <= total; i++) { 
+        images.push('assets/images/' + imgURL + i + '.webp');  
+        if (imgURL==='artworks/gallery'){
+            texts.push(texts1[i-1]);
+        }
+     }
+    for (i = 1; i < num; i++) {
+        images.push('assets/images/' + imgURL + i + '.webp');
+        if (imgURL==='artworks/gallery'){
+            texts.push(texts1[i-1]);
+        }
+    }
     rgbKineticSlider = new rgbKineticSlider({
 
         slideImages: images, // array of images > must be 1920 x 1080
@@ -182,22 +233,22 @@ function callModal(imgURL, num, total) {
         textsSubTitleDisplay: true, // show subtitles
         textsTiltEffect: true, // enable text tilt
         googleFonts: ['brandongrotesque:900', 'brandongrotesque:800'],  //select google font to use
-        buttonMode: false, // enable button mode for title
+        buttonMode: true, // enable button mode for title
         textsRgbEffect: true, // enable text rgb effect
-        textsRgbIntensity: 0.03, // set text rgb intensity
+        textsRgbIntensity: 0.1, // set text rgb intensity
         navTextsRgbIntensity: 15, // set text rgb intensity for regular nav
 
-        textTitleColor: 'white', // title color
-        textTitleSize: 85, // title size
+        textTitleColor: 'red', // title color
+        textTitleSize: 45, // title size
         mobileTextTitleSize: 50, // title size
-        textTitleLetterspacing: 3, // title letterspacing
+        textTitleLetterspacing: 2, // title letterspacing
 
-        textSubTitleColor: 'white', // subtitle color ex : 0x000000
-        textSubTitleSize: 15, // subtitle size
-        mobileTextSubTitleSize: 12, // mobile subtitle size
+        textSubTitleColor: 'red', // subtitle color ex : 0x000000
+        textSubTitleSize: 35, // subtitle size
+        mobileTextSubTitleSize: 30, // mobile subtitle size
         textSubTitleLetterspacing: 2, // subtitle letter spacing
-        textSubTitleOffsetTop: 200, // subtitle offset top
-        mobileTextSubTitleOffsetTop: 200, // mobile subtitle offset top
+        textSubTitleOffsetTop: 300, // subtitle offset top
+        mobileTextSubTitleOffsetTop: 300, // mobile subtitle offset top
     });
     $('#myModal').modal('show');
     // }
@@ -209,17 +260,17 @@ function changebutton() {
         document.querySelector("#bars").classList.add("defaultHide");
         document.querySelector("#bars").style.opacity = "0";
         document.querySelector("#closeX").classList.add("hoverShow");
-        document.querySelector("#closeX").style.opacity = "1";
-        document.querySelector("#brand").style.opacity = "0";
-        document.querySelector("#toggledMenu").style.display = "block";
+        // document.querySelector("#closeX").style.opacity = "1";
+        // document.querySelector("#brand").style.opacity = "0";
+        // document.querySelector("#toggledMenu").style.display = "block";
 
     }
     else {
         document.querySelector("#bars").classList.remove("defaultHide");
         document.querySelector("#closeX").classList.remove("hoverShow");
-        document.querySelector("#closeX").style.opacity = "0";
-        document.querySelector("#bars").style.opacity = "1";
-        document.querySelector("#brand").style.opacity = "1";
+        // document.querySelector("#closeX").style.opacity = "0";
+        // document.querySelector("#bars").style.opacity = "1";
+        // document.querySelector("#brand").style.opacity = "1";
         document.querySelector("#toggledMenu").style.display = "none";
     }
 

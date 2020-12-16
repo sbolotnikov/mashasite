@@ -9,12 +9,52 @@
   }
 
 .main-nav, .notice {
-    background: blue;
-    color:red;
+    width: 60px;
+    height: 30px;
     border-radius: 5px;
-    box-shadow: gray;
+    background: linear-gradient(0deg,#000,#8f8888);
+    color:red;
+    font-weight:400;
+    text-align: center;
+}
+.mainBtn {
+    position:relative;
+    /* margin: 20px, auto, 0; */
+    width: 60px;
+    height: 30px;
+    border-radius: 7px;
+    background: linear-gradient(0deg,#000,#dad0d0);
+    color:red;
+    
+}
+.mainBtn:before, 
+.mainBtn:after{
+    content:' ';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    background: linear-gradient(45deg,#fb0094,#0000ff, #00ff00, #ffff00,#ff0000,#fb0094,#0000ff, #00ff00, #ffff00,#ff0000);
+    background-size: 400%;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    z-index:-1;
+    animation: animate 20s linear infinite;
+}
+.mainBtn:after{
+    filter:blur(20px);
+}
+@keyframes animate{
+ 0%{
+     background-position: 0 0;
+ }
+ 50%{
+    background-position: 400% 0;
+}
+ 100%{
+    background-position: 0 0;
 }
 
+}
 .toggler {
     border: none;
     outline:none;
@@ -98,7 +138,7 @@ ul#socialMenu li{
     height: 1px;
 }
 .external{
-    overflow: hidden;
+    overflow: visible;
     height: 100vh;
     width: 100vw;
 }
@@ -116,6 +156,40 @@ ul#socialMenu li{
     transform-style: preserve-3d;
     padding-bottom: 10rem
 }
+.carousel{
+    width: 100%;
+    overflow-x: visible;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height:100vh;
+
+}
+.carousel .slide{
+    display: inline;
+    width:100%
+}
+.carousel .slide img {
+    object-fit: contain;
+    height:85vh;
+}
+.continue-scroll{
+    animation: scroll 40s infinite;
+    animation-direction: alternate;
+    animation-timing-function:linear;
+  
+}
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0vw);    
+    }
+
+    100% {
+      transform: translateX(-600vw);
+    }
+  }
+
+
 .image-wrapper{
     transform: rotate(90deg);
     display: -webkit-box;
@@ -130,19 +204,15 @@ ul#socialMenu li{
 .image-wrapper:hover{
     min-height: 65vh;
 }
-.image-wrapper a {
-    overflow: hidden;
-    display:block;
-    padding:1vh;
-    background: #fff;
-    box-shadow: 0 10px 50px #5f2f1182;
-}
+
 .gallery-image{
     max-height: 60vh;
     max-width: 65vh;
     transition: .5s;
     vertical-align: top;
 }
+
+
 .slower{
     transform: rotate(90deg) translateZ(-0.2px) scale(1.1) translateX(0%) translateY(-10vh)
 }

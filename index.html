@@ -64,11 +64,11 @@
 
         </div>
         <div class="col-12">
-          <div class="row" style=" display: flex; justify-content: center; padding: 0;" id="toggledMenu">
-            <div class="col-12 col-md-auto" style="padding:0">
+          <div class="row" style=" display: flex; justify-content: space-around; padding: 0;" id="toggledMenu">
+            <div class="col-12 col-md-2" style="padding:0; margin:0">
               <a class="nav-link headerFont" href="tel:030 44041588">030 44041588</a>
             </div>
-            <div class="col-12 col-md-8" style="padding:0">
+            <div class="col-12 col-md-8" style="padding:0; margin:0">
               <div class="row align-items-start">
                 <div class="col-12 col-md-auto" style="padding:0">
                   <a class="nav-link text-dark headerFont" href="#">Home</a>
@@ -87,7 +87,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-1" style="padding:0 ">
+            <div class="col-12 col-md-1" style="padding:0; margin:0 ">
               <ul id="socialMenu" style="display: flex;  justify-content:space-around; width: 100%">
                 <li><a id="map" href="https://www.google.com/maps?cid=3475957935708065149" target="_blank"
                     rel="noopener noreferrer" title="Find on Google Maps">
@@ -200,8 +200,10 @@
           style="font-size: 3vw; color:black;font-weight: 800; font-family: brandongrotesque, sans-serif; text-align: center">
           ART GALLERY</h4>
         <div class="external">
-          <div class="horizontal-scroll" id="artworksGallery"></div>
+          <div class="carousel" id="artworksGallery" onscroll="removeAnime(event)" ></div>
+        
         </div>
+        
       </section>
       <section id="contact" style="margin-top: 10px;">
         <div class="row" style=" margin-top:8vh; width: 100%; margin:0; padding: 0;">
@@ -279,23 +281,14 @@
             <div class="content">
               <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
               <nav>
-                <a href="#" class="main-nav prev" data-nav="previous">Prev <span></span></a>
-                <a href="#" class="main-nav next" data-nav="next">Next <span></span></a>
+                <a href="#" class="main-nav prev" data-nav="previous"><button class="mainBtn">Prev</button><span></span></a>
+                <a href="#" class="main-nav next" data-nav="next"><button class="mainBtn">Next</button> <span></span></a>
               </nav>
               <span class="notice" onclick="location.reload()">Close &times;</span>
             </div>
 
 
-            <!-- 
-
-
-
-            <img id="modalIMG" style="align-self:center;" alt="Gallery picture full resolution">
-
-            <span type="button" id="nextBnt"
-              style="font-size: 6.5vw; position: absolute; top:50vh; right:0">&#8680</span>
-            <span type="button" id="prevBnt"
-              style="font-size: 6.5vw; position: absolute; top:50vh; left:0">&#8678</span> -->
+          
           </div>
 
         </div>
