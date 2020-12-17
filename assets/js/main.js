@@ -9,18 +9,18 @@ var texts1 = [
     ["Flower Fairies", "Ink, colored pencils, acryl, crystals on paper."],
     ["Lady of Marshland", "for sale! 270 euro, free delivery. watercolor on paper"],
     ["Lady of Marshland", "watercolor on paper"],
-    ["Tamerlan","For sale! 200euro, free delivery"],
+    ["Tamerlan", "For sale! 200euro, free delivery"],
     ["Fae. Original for sale!", "50 euro, free delivery. Colored pencils on paper"],
-    ["Summer day. Original for sale!","120 euro, free delivery. watercolor on paper"],
+    ["Summer day. Original for sale!", "120 euro, free delivery. watercolor on paper"],
     ["Diving with mermaids", "Digital art"],
-    [`"She was a catch" Original for sale! 200 euro`,"Free delivery! ink, colored pencils, acryl and crystals on paper"],
+    [`"She was a catch" Original for sale! 200 euro`, "Free delivery! ink, colored pencils, acryl and crystals on paper"],
     ["Spring", "Digital art"],
-    ["in China","oil on canvas"],
+    ["in China", "oil on canvas"],
     ["Western wind", " "],
     ["Spring evening. For sale! 350 euro", "Free delivery. Watercolor and pencils on paper"],
     ["The Star", "ink, colored pencils, acryl and crystals in paper"],
     ["Gethsemane Garden.", "oil on canvas"],
-    ["Sarah Jane"," "]
+    ["Sarah Jane", " "]
 ];
 
 var blog = [
@@ -48,7 +48,6 @@ function startHtml() {
     } else {
         document.querySelector("#closeX").style.opacity = "0";
         document.querySelector("#bars").style.opacity = "0";
-        document.querySelector("#toggledMenu").style.display = "block";
         document.querySelector("#brand").style.opacity = "1";
     }
     document.getElementById('sendto').defaultValue = emailToSend;
@@ -64,7 +63,6 @@ function fillBlog() {
         childImg.src = `assets/images/news/image${i + 1}.webp`;
         childImg.alt = `blog image number ${i + 1}`;
         childBlog.appendChild(childImg);
-
         childDiv = document.createElement("div");
         childDiv.classList.add('text');
         subDiv = document.createElement("h1");
@@ -90,30 +88,23 @@ function fillBlog() {
     }
 }
 
-
-
-
 function fillGallery(name, picTotal, animateOrigin) {
     let childDiv, childImg;
     let node = document.querySelector('#' + name + "Gallery");
 
     for (let i = 1; i <= picTotal; i++) {
         childDiv = document.createElement("div");
-        
         childImg = document.createElement('img');
-        
         if (animateOrigin === 1) {
             childImg.classList.add('gallery-image');
             childDiv.classList.add('image-wrapper');
             if (animationArray[(i - 1) % 11][0] !== '') childDiv.classList.add(animationArray[(i - 1) % 11][0]);
             if (animationArray[(i - 1) % 11][1] !== '') childDiv.classList.add(animationArray[(i - 1) % 11][1]);
-            
-        }else{
+
+        } else {
             childDiv.classList.add('slide');
             childImg.classList.add('continue-scroll');
         }
-        
-        
         childImg.src = `assets/images/${name}/gallery${i}.webp`;
         childImg.alt = `gallery image number${i}`;
         // childImg.loading = 'lazy';
@@ -121,11 +112,11 @@ function fillGallery(name, picTotal, animateOrigin) {
         childDiv.appendChild(childImg);
         node.appendChild(childDiv)
     }
-    if (animateOrigin === 1){
-         childDiv.classList.add("last");
-    } 
+    if (animateOrigin === 1) {
+        childDiv.classList.add("last");
+    }
 }
-function removeAnime(event){
+function removeAnime(event) {
     // event.preventDefault();
     // let node=event.target.firstChild;
     // node.firstChild.classList.remove("continue-scroll");
@@ -137,7 +128,7 @@ function removeAnime(event){
     //     console.log(i++)
     // }
     // .forEach(function(el){el.firstElementChild.classList.remove("continue-scroll")});
-    
+
     // anim.classList.remove("continue-scroll");
 }
 function emailSend(event) {
@@ -188,17 +179,17 @@ function callModal(imgURL, num, total) {
     // document.querySelector('#nextBnt').setAttribute("onclick",`callModal('${imgURL}',${num+1},${total})`);
     // document.querySelector('#prevBnt').setAttribute("onclick",`callModal('${imgURL}',${num-1},${total})`);
     images = [];
-    texts=[];
-    for (let i = num; i <= total; i++) { 
-        images.push('assets/images/' + imgURL + i + '.webp');  
-        if (imgURL==='artworks/gallery'){
-            texts.push(texts1[i-1]);
+    texts = [];
+    for (let i = num; i <= total; i++) {
+        images.push('assets/images/' + imgURL + i + '.webp');
+        if (imgURL === 'artworks/gallery') {
+            texts.push(texts1[i - 1]);
         }
-     }
+    }
     for (i = 1; i < num; i++) {
         images.push('assets/images/' + imgURL + i + '.webp');
-        if (imgURL==='artworks/gallery'){
-            texts.push(texts1[i-1]);
+        if (imgURL === 'artworks/gallery') {
+            texts.push(texts1[i - 1]);
         }
     }
     rgbKineticSlider = new rgbKineticSlider({
@@ -256,24 +247,31 @@ function callModal(imgURL, num, total) {
 
 function changebutton() {
     // ≥768px
-    if ((document.querySelector("#bars").style.opacity === "1") || (!document.querySelector("#bars").style.opacity)) {
-        document.querySelector("#bars").classList.add("defaultHide");
-        document.querySelector("#bars").style.opacity = "0";
-        document.querySelector("#closeX").classList.add("hoverShow");
-        // document.querySelector("#closeX").style.opacity = "1";
-        // document.querySelector("#brand").style.opacity = "0";
-        // document.querySelector("#toggledMenu").style.display = "block";
+    if (windWidth > 768) {
 
+        document.querySelector("#closeX").style.opacity = "0";
+        document.querySelector("#bars").style.opacity = "0";
+        document.querySelector("#brand").style.opacity = "1";
     }
     else {
-        document.querySelector("#bars").classList.remove("defaultHide");
-        document.querySelector("#closeX").classList.remove("hoverShow");
-        // document.querySelector("#closeX").style.opacity = "0";
-        // document.querySelector("#bars").style.opacity = "1";
-        // document.querySelector("#brand").style.opacity = "1";
-        document.querySelector("#toggledMenu").style.display = "none";
-    }
+        if (document.querySelector("#bars").style.opacity === "1") {
+            document.querySelector("#bars").classList.add("defaultHide");
+            document.querySelector("#bars").style.opacity = "0";
+            document.querySelector("#closeX").classList.add("hoverShow");
+            document.querySelector("#closeX").style.opacity = "1";
+            document.querySelector("#brand").style.display = "none";
+            document.querySelector("#toggledMenu").style.display = "block";
 
+        }
+        else {
+            document.querySelector("#bars").classList.remove("defaultHide");
+            document.querySelector("#closeX").classList.remove("hoverShow");
+            document.querySelector("#closeX").style.opacity = "0";
+            document.querySelector("#bars").style.opacity = "1";
+            document.querySelector("#brand").style.display = "block";
+            document.querySelector("#toggledMenu").style.display = "none";
+        }
+    }
 }
 
 

@@ -41,7 +41,7 @@
   <script src="assets/js/rgbKineticSlider.js"></script>
 </head>
 
-<body onload="startHtml()" onresize="{location.reload}">
+<body onload="startHtml()" onresize="startHtml()">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -58,10 +58,13 @@
             <i class="fa fa-times fa-lg icon-hover" id="closeX"></i>
           </span>
 
-          <a href="index.html" style="display: flex; justify-content: center; width: 100%">
+          <a href="index.html" style="display: flex; justify-content: center; height: 100%">
             <img src="./assets/images/mashalogo.webp" alt="navbar-brand" id="brand" style=" width: 30%" />
+            <hr style="border-bottom: 3px solid #bbb;">
           </a>
-
+          
+          
+          <br/>
         </div>
         <div class="col-12">
           <div class="row" style=" display: flex; justify-content: space-around; padding: 0;" id="toggledMenu">
