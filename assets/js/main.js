@@ -55,6 +55,7 @@ function startHtml() {
 
 function fillBlog() {
     let parentElement = document.querySelector('#blog');
+    parentElement.innerHTML="";
     let childBlog, childDiv, subDiv, spanDiv, childImg;
     for (let i = 0; i < blog.length; i++) {
         childBlog = document.createElement("div");
