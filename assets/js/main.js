@@ -56,7 +56,7 @@ function startHtml() {
 function fillBlog() {
     let parentElement = document.querySelector('#blog');
     parentElement.innerHTML="";
-    let childBlog, childDiv, subDiv, spanDiv, childImg;
+    let parentBl, childBlog, childDiv, subDiv, spanDiv, childImg;
     for (let i = 0; i < blog.length; i++) {
         childBlog = document.createElement("div");
         childBlog.classList.add('tile');
@@ -87,6 +87,7 @@ function fillBlog() {
         childBlog.appendChild(childDiv);
         parentElement.appendChild(childBlog);
     }
+    
 }
 
 function fillGallery(name, picTotal, animateOrigin) {
