@@ -84,7 +84,7 @@
 }
 
 section{
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
 }
 .defaultHide{
     transform: rotate(180deg) opacity(0);

@@ -38,7 +38,14 @@ var windHeight = window.innerHeight;
 
 function startHtml() {
     fillBlog();
-    fillGallery("tatoos", totalPictures, 1);
+    var ua = navigator.userAgent;
+
+    if (( navigator.userAgent.match(/Android/i)) && ( navigator.userAgent.match(/Chrome/i))) {
+        fillGallery("tatoos", totalPictures, 2);
+    } else {
+        console.log(ua)
+        fillGallery("tatoos", totalPictures, 1);
+    }
     fillGallery("artworks", totalArtworks, 0);
     if (windWidth <= 768) {
         document.querySelector("#toggledMenu").style.display = "none";
@@ -55,7 +62,7 @@ function startHtml() {
 
 function fillBlog() {
     let parentElement = document.querySelector('#blog');
-    parentElement.innerHTML="";
+    parentElement.innerHTML = "";
     let parentBl, childBlog, childDiv, subDiv, spanDiv, childImg;
     for (let i = 0; i < blog.length; i++) {
         childBlog = document.createElement("div");
@@ -87,13 +94,13 @@ function fillBlog() {
         childBlog.appendChild(childDiv);
         parentElement.appendChild(childBlog);
     }
-    
+
 }
 
 function fillGallery(name, picTotal, animateOrigin) {
     let childDiv, childImg;
     let node = document.querySelector('#' + name + "Gallery");
-
+    
     for (let i = 1; i <= picTotal; i++) {
         childDiv = document.createElement("div");
         childImg = document.createElement('img');
@@ -103,9 +110,14 @@ function fillGallery(name, picTotal, animateOrigin) {
             if (animationArray[(i - 1) % 11][0] !== '') childDiv.classList.add(animationArray[(i - 1) % 11][0]);
             if (animationArray[(i - 1) % 11][1] !== '') childDiv.classList.add(animationArray[(i - 1) % 11][1]);
 
-        } else {
+        } 
+        else if (animateOrigin===0){
             childDiv.classList.add('slide');
             childImg.classList.add('continue-scroll');
+
+        }
+        else if (animateOrigin===2){
+            childDiv.classList.add('slide');
         }
         childImg.src = `assets/images/${name}/gallery${i}.webp`;
         childImg.alt = `gallery image number${i}`;
@@ -116,6 +128,10 @@ function fillGallery(name, picTotal, animateOrigin) {
     }
     if (animateOrigin === 1) {
         childDiv.classList.add("last");
+    }
+    if (animateOrigin === 2) {
+        node.classList.remove("horizontal-scroll");
+        node.classList.add("carousel");
     }
 }
 function removeAnime(event) {
