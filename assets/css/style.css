@@ -13,8 +13,9 @@
     height: 30px;
     border-radius: 5px;
     background: linear-gradient(0deg,#000,#8f8888);
-    color:red;
-    font-weight:400;
+    color:white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:200;
     text-align: center;
     cursor: pointer;
 }
@@ -22,8 +23,8 @@
 .mainBtn {
     position:relative;
     /* margin: 20px, auto, 0; */
-    font-family: 'brandongrotesque';
-    font-weight: 600;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 200;
     width: 60px;
     height: 30px;
     border-radius: 7px;
