@@ -177,7 +177,7 @@ ul#socialMenu li{
 }
 .carousel .slide img {
     object-fit: contain;
-    height:85vh;
+    height:65vh;
 }
 .continue-scroll{
     animation: scroll 40s infinite;
