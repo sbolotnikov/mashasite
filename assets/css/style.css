@@ -7,7 +7,7 @@
     font-weight: 100;
     font-style: normal;
   }
-
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 .main-nav, .notice {
     width: 60px;
     height: 30px;
@@ -16,15 +16,19 @@
     color:red;
     font-weight:400;
     text-align: center;
+    cursor: pointer;
 }
+
 .mainBtn {
     position:relative;
     /* margin: 20px, auto, 0; */
+    font-family: 'brandongrotesque';
+    font-weight: 600;
     width: 60px;
     height: 30px;
     border-radius: 7px;
     background: linear-gradient(0deg,#000,#dad0d0);
-    color:red;
+    color:white;
     
 }
 .mainBtn:before, 
@@ -33,7 +37,8 @@
     position: absolute;
     top: -4px;
     left: -4px;
-    background: linear-gradient(45deg,#fb0094,#0000ff, #00ff00, #ffff00,#ff0000,#fb0094,#0000ff, #00ff00, #ffff00,#ff0000);
+    border-radius: 7px;
+    background: linear-gradient(45deg,#3d3c3d,#1c1c1d, #979997, #dadad8,#868484,#636262,#2d2d2e, #8b8d8b, #fcfcfc,#4e4d4d);
     background-size: 400%;
     width: calc(100% + 8px);
     height: calc(100% + 8px);
@@ -147,7 +152,7 @@ ul#socialMenu li{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:100vh;
+    width:65vh;
     transform: rotate(-90deg) translate3d(0, -100vh, 0);
     transform-origin: right top;
     overflow-y: auto;
@@ -162,7 +167,7 @@ ul#socialMenu li{
     overflow-x: visible;
     overflow-y: hidden;
     white-space: nowrap;
-    height:100vh;
+    height:65vh;
 
 }
 .carousel .slide{

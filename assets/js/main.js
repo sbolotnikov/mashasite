@@ -241,18 +241,18 @@ function callModal(imgURL, num, total) {
         textsDisplay: true, // show title
         textsSubTitleDisplay: true, // show subtitles
         textsTiltEffect: true, // enable text tilt
-        googleFonts: ['brandongrotesque:900', 'brandongrotesque:800'],  //select google font to use
+        googleFonts: ['Josefin Sans:400', 'Josefin Sans:200'],  //select google font to use
         buttonMode: true, // enable button mode for title
         textsRgbEffect: true, // enable text rgb effect
         textsRgbIntensity: 0.1, // set text rgb intensity
         navTextsRgbIntensity: 15, // set text rgb intensity for regular nav
 
-        textTitleColor: 'red', // title color
+        textTitleColor: 'white', // title color
         textTitleSize: 45, // title size
         mobileTextTitleSize: 50, // title size
         textTitleLetterspacing: 2, // title letterspacing
 
-        textSubTitleColor: 'red', // subtitle color ex : 0x000000
+        textSubTitleColor: 'white', // subtitle color ex : 0x000000
         textSubTitleSize: 35, // subtitle size
         mobileTextSubTitleSize: 30, // mobile subtitle size
         textSubTitleLetterspacing: 2, // subtitle letter spacing
