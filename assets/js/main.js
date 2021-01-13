@@ -63,46 +63,45 @@ function startHtml() {
     document.getElementById('sendto').defaultValue = emailToSend;
 
     // window.scrollTo(0,0);
-
-
     if (windWidth <= 768)  proportion=.6;
     document.querySelector("#brand").style.width=`${(proportion-.2)*100}vw`;
     var hHeader=document.querySelector("#header1").offsetHeight;
     console.log("header height");
-    console.log(a);
+    console.log(hHeader);
     document.querySelector("#logoStart").style.width=`${proportion*100}vw`;
     document.querySelector("#logoStart").style.left=`${Math.floor(windWidth*(1-proportion)/2-10)}px`;
     document.querySelector("#logoStart").style.top=`${-Math.floor(windHeight/2+hHeader-(windWidth*proportion/461*311)/2)}px`;
-    gsap.timeline()
-    .from("#logoStart", {opacity:0,scale:0.1})
-    .to("#logoStart", {duration:2,scale:1,rotationY:360,transformOrigin:"50% 50%",opacity:1})
-    .to("#text1", {duration:.1,x:-300,opacity:1})
-    .to("#text1", {duration:1,ease:'elastic',x:0})
+    // gsap.timeline()
+    // .from("#text1", {opacity:0})
+    gsap.timeline({delay:8})
+    // .to("#logo", {duration:1,rotationY:360,transformOrigin:"50% 50%"})
+    .to("#text1", {duration:.1,x:-300,opacity:0})
+    .to("#text1", {duration:1,ease:'ease',x:0, opacity:1})
     
 
-    gsap.timeline({repeat:-1, delay:4})
+    gsap.timeline({repeat:-1, delay:10})
     .to("#leftWing", {duration:.5,transformOrigin:"0% 80%",rotate:-9,ease: "back"})
     .to("#leftWing", {duration:.5,transformOrigin:"0% 80%",rotate:0,ease: "back"})
 
-    gsap.timeline({repeat:-1, delay:4})
+    gsap.timeline({repeat:-1, delay:10})
     .to("#rightWing", {duration:.5,transformOrigin:"100% 80%",rotate:9,ease: "back"})
     .to("#rightWing", {duration:.5,transformOrigin:"100% 80%",rotate:0,ease: "back"})
 
-    gsap.timeline({repeat:-1, delay:4})
+    gsap.timeline({repeat:-1, delay:10})
     .to("#crown", {duration:.8,transformOrigin:"50% 100%",rotate:3,ease: "back"})
     .to("#crown", {duration:.8,transformOrigin:"50% 100%",rotate:-3,ease: "back"})
 
-    gsap.timeline({repeat:-1, delay:4})
+    gsap.timeline({repeat:-1, delay:10})
     .to("#text1", {duration:1,transformOrigin:"center top",rotate:1.5,ease: "back"})
     .to("#text1", {duration:1,transformOrigin:"center top",rotate:-1.5,ease: "back"})
 
 
-    gsap.timeline({ delay:4}) 
+    gsap.timeline({ delay:10}) 
     .to("#logoStart", {duration:3,scale:.4,y:-Math.floor(windHeight/2+hHeader-(windWidth*proportion/461*311)/2)})
     .to("#logoStart", {duration:2,rotationY:360,transformOrigin:"50% 50%",opacity:0})
-    gsap.timeline({ delay:6}).to("header",{duration:2,opacity:1})
-    gsap.timeline({ delay:7}).to("#mainSite",{duration:3,opacity:1})
-    // document.querySelector("#container0").style.display="none"
+    gsap.timeline({ delay:12}).to("header",{duration:2,opacity:1})
+    gsap.timeline({ delay:12}).to("#mainSite",{duration:3,opacity:1})
+    
 
 };
 
