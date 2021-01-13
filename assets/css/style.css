@@ -59,8 +59,57 @@
  100%{
     background-position: 0 0;
 }
-
 }
+#container0{
+    display:flex; 
+    height:100vh;
+    width:100vw; 
+    padding:0;
+    margin:0;
+    animation-delay:8s;
+    animation-name: slidein;
+    animation-duration:  3s;
+    animation-fill-mode: forwards;
+   
+  }
+  
+  @keyframes slidein {
+    0% {
+      height: 100%;
+    }
+    25% {
+        height: 75%;
+      } 
+    50% {
+        height: 50%;
+      }   
+    75% {
+        height: 25%;
+      }     
+    100% {
+      height: 0%;
+    }
+  }
+#rEye{
+    animation-delay:4s;
+    animation-name: wink;
+    animation-duration:  1s;
+    animation-fill-mode: forwards;
+    transform-origin: 50% 50%;
+}
+@keyframes wink {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    50% {
+        transform: rotateX(90deg);
+      }       
+    100% {
+        transform: rotateX(0deg);
+    }
+  }
+
 .toggler {
     border: none;
     outline:none;
@@ -103,14 +152,11 @@ section{
 }
 .nav-link{
     text-align: center;
-}
-.headerFont{
     font-family: 'brandongrotesque';
     font-weight: 900;
-    text-align: center;
-    font-size: auto;
+    font-size: 1.75vh;
     color:black;
-    height: 14vh;
+    height: 15.6vh;
 }
 ul#socialMenu li{
     display:inline;
@@ -146,7 +192,7 @@ ul#socialMenu li{
 }
 .external{
     overflow: visible;
-    height: 100vh;
+    height: 70vh;
     width: 100vw;
 }
 .horizontal-scroll{
@@ -252,6 +298,9 @@ ul#socialMenu li{
 .form-input{
     border: 3px,black;
     width:97%;
+    padding-left: 10px ;
+    font-family: 'brandongrotesque';
+    font-size: 1.5vw;
 }
 /* liquify button changed from 50px to 100px */
 .transparentBtn{
@@ -355,3 +404,11 @@ ul#socialMenu li{
        top: 40px;
        left: -20px;
 }
+.footerClass{
+    text-align: center;
+    padding: 25px;
+    background-color:#e9ecef;
+    color:black;
+    font-family: 'brandongrotesque';
+    font-size: 1.5vw;
+  }

@@ -10,7 +10,8 @@
   <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/v4-shims.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
 
   <title>Tattoo and art | Berlin | Maria Koroleva</title>
   <meta name="description"
@@ -48,10 +49,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+  <div class="container" style="max-width: 1400px; overflow: hidden">
 
-  <div class="container" style="max-width: 1200px; overflow: hidden">
-    <header>
-
+    <header id="header1" style="opacity:0">
+      <!-- <header> -->
       <div class="row">
         <div class="col-12" style=" display:flex; justify-content: center; width:100%">
 
@@ -60,11 +61,54 @@
             <i class="fa fa-times fa-lg icon-hover" id="closeX"></i>
           </span>
 
-          <a href="index.html" style="display: flex; justify-content: center; height: 100%">
-            <img src="./assets/images/mashalogo.webp" alt="navbar-brand" id="brand" style=" width: 30%" />
-            <hr style="border-bottom: 3px solid #bbb;">
+          <a id="brandA" href="index.html" style="width:100vw">
+            <div  style="display: flex; justify-content: center;overflow:visible;">
+              <svg id="brand" width="461" height="311" viewBox="0 0 461 311" fill="none" xmlns="http://www.w3.org/2000/svg"
+              style=" height:auto; overflow:visible" >
+                <g>
+                  <g>
+                    <path
+                      d="M408 206.5C428.215 194.542 437.288 186.05 446 165L420.5 153C367.96 143.337 343.583 143.167 307.5 150.5C307.193 158.251 306.097 162.137 303 168.5C304.314 173.895 307.218 180.962 312.5 186.5C325.797 196.185 334.336 200.445 351 206.5C372.46 212.749 384.97 212.513 408 206.5Z"
+                      fill="white" stroke="black" stroke-width="5" />
+                    <path
+                      d="M423 152C440.304 137.024 450.079 124.397 457 92H405.5C353.618 95.5796 334.055 104.356 309 127V152C315.961 157.604 321.811 160.459 336 165C371.022 168.654 390.09 165.964 423 152Z"
+                      fill="white" stroke="black" stroke-width="5" />
+                    <path
+                      d="M423 92.0147C397.013 122.132 371.18 128.902 309 126.515L299 109.515C320.603 84.5365 334.775 71.9414 364.5 52.5147C395.896 36.2955 412.131 30.6714 437 31.0147C436.464 57.7667 433.434 71.1438 423 92.0147Z"
+                      fill="white" stroke="black" stroke-width="5" />
+                  </g>
+                  <path
+                    d="M164 18.5001C164 18.5001 185.5 63.5001 186.5 67.0001C187.5 70.5001 192 68.5001 192 68.5001C221.771 59.2959 239.498 58.3676 274 68.5001C274 68.5001 277.5 70.5001 278.5 67.0001C279.5 63.5001 298 17.0001 298 17.0001C298 17.0001 302 8.5 293.5 15.0001C285 21.5001 268 34.0001 268 34.0001C263.905 36.9598 261.809 37.083 258.5 34.0001L235.5 6.50007C232.928 2.26024 231.377 1.18289 228 6.50007L206 34.0001C202.681 36.1104 200.819 36.3928 197.5 34.0001L170 15.0001C163.582 11.3865 162.213 12.0864 164 18.5001Z"
+                    fill="white" stroke="black" stroke-width="5" />
+                  <g>
+                    <path
+                      d="M55.5 206.5C35.2851 194.542 26.2125 186.05 17.5 165L39.5 154.5C80.2895 140.497 105.192 139.92 153 151C155.024 160.737 156.461 165.407 159.5 172.5C158.186 177.895 156.282 180.962 151 186.5C137.703 196.185 129.164 200.445 112.5 206.5C91.0403 212.749 78.5304 212.513 55.5 206.5Z"
+                      fill="white" stroke="black" stroke-width="5" />
+                    <path
+                      d="M38 152C20.6964 137.024 10.9208 124.397 4 92H55.5C98.7738 92.6708 119.88 100.148 152 126C151.744 137.044 152.279 142.27 154 150.5C147.039 156.104 139.189 160.459 125 165C89.9782 168.654 70.91 165.964 38 152Z"
+                      fill="white" stroke="black" stroke-width="5" />
+                    <path
+                      d="M39 92C64.9874 122.117 90.8201 128.887 153 126.5C156.685 117.956 158.869 114.221 163 109.5C141.397 84.5218 127.225 71.9267 97.5 52.5C66.1042 36.2808 49.8692 30.6567 25 31C25.5358 57.752 28.5655 71.1291 39 92Z"
+                      fill="white" stroke="black" stroke-width="5" />
+                  </g>
+                  <path
+                    d="M233.5 80.5C191.085 81.7412 174.61 92.1386 154.5 123C151.649 135.24 151.764 143.547 154.5 160.5C164.707 183.048 171.033 192.949 183 207.5C197.955 224.15 206.395 231.968 221.5 244.5C229.692 247.398 233.878 247.495 240.5 244.5C258.313 231.024 266.767 222.891 279.5 207.5C290.773 193.855 296.862 184.159 307 160.5C309.559 140.932 309.761 132.335 307 123C286.522 90.8208 270.22 81.9114 233.5 80.5Z"
+                    fill="white" stroke="black" stroke-width="5" />
+                  <path
+                    d="M215.5 163C208.967 149.445 206.622 144.869 186.5 136.5L177 136.5C177 136.5 172.8 136.273 171 142C167.656 149.011 167.91 155.202 171 163C178.973 171.763 183.998 174.696 193.5 178C203.588 180.023 207.46 179.573 213.5 178C215.325 176.785 216.042 175.741 217 173.5C217.698 170.852 217.684 168.909 215.5 163Z"
+                    fill="white" stroke="black" stroke-width="5" />
+                  <path
+                    d="M247.909 163.501C254.442 149.946 256.787 145.37 276.909 137.001L286.409 137.001C286.409 137.001 290.609 136.774 292.409 142.501C295.753 149.512 295.499 155.703 292.409 163.501C284.436 172.264 279.411 175.198 269.909 178.501C259.821 180.525 255.949 180.074 249.909 178.501C248.084 177.286 247.367 176.242 246.409 174.001C245.711 171.354 245.725 169.41 247.909 163.501Z"
+                    fill="white" stroke="black" stroke-width="5" />
+                  <text fill="black" stroke="black" xml:space="preserve" style="white-space: pre"
+                    font-family="Times New Roman" font-size="75" letter-spacing="0em">
+                    <tspan x="79.3901" y="309.305">malimalia</tspan>
+                  </text>
+                </g>
+              </svg>
+            </div>
+            <hr style="border-bottom: 1px solid #000000fc;">        
           </a>
-
 
           <br />
 
@@ -72,24 +116,26 @@
         <div class="col-12">
           <div class="row" style=" display: flex; justify-content: space-around; padding: 0;" id="toggledMenu">
             <div class="col-12 col-md-2" style="padding:0; margin:0">
-              <a class="nav-link headerFont" href="tel:030 44041588">030 44041588</a>
+              <a class="nav-link" href="tel:030 44041588"  style="  white-space: nowrap;overflow: hidden; text-overflow: ellipsis;">030 44041588</a>
             </div>
             <div class="col-12 col-md-8" style="padding:0; margin:0">
               <div class="row align-items-start">
-                <div class="col-12 col-md-auto" style="padding:0">
-                  <a class="nav-link text-dark headerFont" href="#">Home</a>
+                <div class="col-12 col-md-2" style="padding:0">
+                  <a class="nav-link" href="#">Home</a>
                 </div>
-                <div class="col-12 col-md-auto" style="padding:0">
-                  <a class="nav-link text-dark headerFont" href='#contact'>Contact</a>
+                <div class="col-12 col-md-2" style="padding:0">
+                  <a class="nav-link" href='#contact'>Contact</a>
                 </div>
-                <div class="col-12 col-md-auto" style="padding:0">
-                  <a class="nav-link headerFont " href="#tatoos">Tattoo</a>
+                <div class="col-12 col-md-2" style="padding:0">
+                  <a class="nav-link" href="#tatoos">Tattoo</a>
                 </div>
-                <div class="col-12 col-md-auto" style="padding:0">
-                  <a class="nav-link text-dark headerFont" href="#artworks">Art work</a>
+                <div class="col-12 col-md-2" style="padding:0">
+                  <a class="nav-link" href="#artworks">Artwork</a>
                 </div>
-                <div class="col-12 col-md-auto" style="padding:0">
-                  <a class="nav-link text-dark headerFont" href="#">Original Art Work on sale</a>
+                <div class="col-12 col-md-4" style="padding:0">
+                  <a class="nav-link" href="#"
+                    style=" white-space: nowrap;overflow: hidden; text-overflow: ellipsis;">Original Art Work on
+                    sale</a>
                 </div>
               </div>
             </div>
@@ -118,203 +164,265 @@
 
     </header>
     <main>
-
-      <div class="jumbotron"
-        style="color:black; margin-top: 10vh; font-family: brandongrotesque, sans-serif; text-align: center">
-        <h1 style="font-size: 6vw; font-weight: 900;">MARIA KOROLEVA</h1>
-        <h4 style="font-size: 2vw; font-weight:600">Tattoo Artist, Berlin</h4>
+      <div id="container0">
+      <div id="logoStart" style="position: relative; overflow:visible; z-index:400">
+        <svg width="461" height="311" viewBox="0 0 461 311" fill="none" xmlns="http://www.w3.org/2000/svg"
+          style="position:absolute;bottom:0;right:0;width:100%; height:auto; overflow:visible">
+          <g id="logo">
+            <g id="leftWing">
+              <path id="wing3"
+                d="M408 206.5C428.215 194.542 437.288 186.05 446 165L420.5 153C367.96 143.337 343.583 143.167 307.5 150.5C307.193 158.251 306.097 162.137 303 168.5C304.314 173.895 307.218 180.962 312.5 186.5C325.797 196.185 334.336 200.445 351 206.5C372.46 212.749 384.97 212.513 408 206.5Z"
+                fill="white" stroke="black" stroke-width="5" />
+              <path id="wing2"
+                d="M423 152C440.304 137.024 450.079 124.397 457 92H405.5C353.618 95.5796 334.055 104.356 309 127V152C315.961 157.604 321.811 160.459 336 165C371.022 168.654 390.09 165.964 423 152Z"
+                fill="white" stroke="black" stroke-width="5" />
+              <path id="wing1"
+                d="M423 92.0147C397.013 122.132 371.18 128.902 309 126.515L299 109.515C320.603 84.5365 334.775 71.9414 364.5 52.5147C395.896 36.2955 412.131 30.6714 437 31.0147C436.464 57.7667 433.434 71.1438 423 92.0147Z"
+                fill="white" stroke="black" stroke-width="5" />
+            </g>
+            <path id="crown"
+              d="M164 18.5001C164 18.5001 185.5 63.5001 186.5 67.0001C187.5 70.5001 192 68.5001 192 68.5001C221.771 59.2959 239.498 58.3676 274 68.5001C274 68.5001 277.5 70.5001 278.5 67.0001C279.5 63.5001 298 17.0001 298 17.0001C298 17.0001 302 8.5 293.5 15.0001C285 21.5001 268 34.0001 268 34.0001C263.905 36.9598 261.809 37.083 258.5 34.0001L235.5 6.50007C232.928 2.26024 231.377 1.18289 228 6.50007L206 34.0001C202.681 36.1104 200.819 36.3928 197.5 34.0001L170 15.0001C163.582 11.3865 162.213 12.0864 164 18.5001Z"
+              fill="white" stroke="black" stroke-width="5" />
+            <g id="rightWing">
+              <path id="wing3_2"
+                d="M55.5 206.5C35.2851 194.542 26.2125 186.05 17.5 165L39.5 154.5C80.2895 140.497 105.192 139.92 153 151C155.024 160.737 156.461 165.407 159.5 172.5C158.186 177.895 156.282 180.962 151 186.5C137.703 196.185 129.164 200.445 112.5 206.5C91.0403 212.749 78.5304 212.513 55.5 206.5Z"
+                fill="white" stroke="black" stroke-width="5" />
+              <path id="wing2_2"
+                d="M38 152C20.6964 137.024 10.9208 124.397 4 92H55.5C98.7738 92.6708 119.88 100.148 152 126C151.744 137.044 152.279 142.27 154 150.5C147.039 156.104 139.189 160.459 125 165C89.9782 168.654 70.91 165.964 38 152Z"
+                fill="white" stroke="black" stroke-width="5" />
+              <path id="wing1_2"
+                d="M39 92C64.9874 122.117 90.8201 128.887 153 126.5C156.685 117.956 158.869 114.221 163 109.5C141.397 84.5218 127.225 71.9267 97.5 52.5C66.1042 36.2808 49.8692 30.6567 25 31C25.5358 57.752 28.5655 71.1291 39 92Z"
+                fill="white" stroke="black" stroke-width="5" />
+            </g>
+            <path id="head"
+              d="M233.5 80.5C191.085 81.7412 174.61 92.1386 154.5 123C151.649 135.24 151.764 143.547 154.5 160.5C164.707 183.048 171.033 192.949 183 207.5C197.955 224.15 206.395 231.968 221.5 244.5C229.692 247.398 233.878 247.495 240.5 244.5C258.313 231.024 266.767 222.891 279.5 207.5C290.773 193.855 296.862 184.159 307 160.5C309.559 140.932 309.761 132.335 307 123C286.522 90.8208 270.22 81.9114 233.5 80.5Z"
+              fill="white" stroke="black" stroke-width="5" />
+            <path id="rEye"
+              d="M215.5 163C208.967 149.445 206.622 144.869 186.5 136.5L177 136.5C177 136.5 172.8 136.273 171 142C167.656 149.011 167.91 155.202 171 163C178.973 171.763 183.998 174.696 193.5 178C203.588 180.023 207.46 179.573 213.5 178C215.325 176.785 216.042 175.741 217 173.5C217.698 170.852 217.684 168.909 215.5 163Z"
+              fill="white" stroke="black" stroke-width="5" />
+            <path id="lEye"
+              d="M247.909 163.501C254.442 149.946 256.787 145.37 276.909 137.001L286.409 137.001C286.409 137.001 290.609 136.774 292.409 142.501C295.753 149.512 295.499 155.703 292.409 163.501C284.436 172.264 279.411 175.198 269.909 178.501C259.821 180.525 255.949 180.074 249.909 178.501C248.084 177.286 247.367 176.242 246.409 174.001C245.711 171.354 245.725 169.41 247.909 163.501Z"
+              fill="white" stroke="black" stroke-width="5" />
+            <text id="text1" fill="black" stroke="black" xml:space="preserve" style="white-space: pre; opacity: 0;"
+              font-family="Times New Roman" font-size="75" letter-spacing="0em">
+              <tspan x="79.3901" y="309.305">malimalia</tspan>
+            </text>
+          </g>
+        </svg>
       </div>
-      <img src="./assets/images/frontimage.webp" alt="front-image" style=" width: 100%" />
-      <br />
-      <br />
-      <div class="row"
-        style=" display: flex; justify-content: center;margin-left: auto;margin-right:auto; margin-top:8vh; width: 95%">
-        <div class="col-12 col-md-6" style="text-align: center; font-family: brandongrotesque, sans-serif;">
-          <h4 style="font-size: 3vw;  color:black; font-weight: 600; text-align: center;">ABOUT</h4>
-          <br>
-          <br>
-          <h4 style="font-size: 2vw; font-weight:600; text-align: center;">My name is Maria Koroleva.</h4>
-          <br>
-          <h5 class="maintext">I'm a professional tattoo artist currently working in Berlin, having previously plied my
-            trade in Moscow.
-            I have graduated the Art Faculty of Moscow University and specialized for 1 year in Oriental Art in China.
-          </h5>
-          <h5 class="maintext">Besides tattoos I am also continuously producing artwork available on both original
-            canvas, and prints on
-            a variety of other accessories.</h5>
-          <h5 class="maintext"> To discuss either a commissioned art or to book a tattoo appointment please contact me
-            via the
-            contact <a class="mainlink" href="#contact">form below</a>, on <a class="mainlink"
-              href="https://www.facebook.com/malimalia221/" target="_blank" rel="noopener noreferrer">facebook</a> or in
-            <a class="mainlink" href="https://www.instagram.com/malimalia/" target="_blank"
-              rel="noopener noreferrer">instagram</a>.
-          </h5>
-        </div>
-        <div class="col-12 col-md-6" style="padding:0; align-items: center;">
-          <img src="./assets/images/work.webp" alt="Maria at work" style=" width: 100%" />
-        </div>
       </div>
-      <div class="jumbotron" style="display: flex; justify-content: center; margin-top:8vh; width: 100%">
-        <iframe width="940" height="440" src="https://www.youtube.com/embed/J-PQl0XIEaQ" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
-      <br />
-      <section id="news">
-        <h4
-          style="font-size: 3vw; color:black;font-weight: 800; font-family: brandongrotesque, sans-serif; text-align: center">
-          NEWS</h4>
-        <div class="wrap" id="blog">
+      <!-- <div id="mainSite"> -->
+      <div id="mainSite" style="opacity: 0;">  
+        <div class="jumbotron"
+          style="color:black; margin-top: 1vh; font-family: brandongrotesque, sans-serif; text-align: center">
+          <h1 style="font-size: 6vw; font-weight: 900;">MARIA KOROLEVA</h1>
+          <h4 style="font-size: 2vw; font-weight:600">Tattoo Artist, Berlin</h4>
         </div>
-      </section>
-      <br />
-      <section id="tatoos">
-        <div class="external">
+        <img src="./assets/images/frontimage.webp" alt="front-image" style=" width: 100%" />
+        <br />
+        <br />
+        <div class="row"
+          style=" display: flex; justify-content: center;margin-left: auto;margin-right:auto; margin-top:8vh; width: 95%">
+          <div class="col-12 col-md-6"
+            style="text-align: center; font-family: brandongrotesque, sans-serif; display:flex ">
+            <div style="align-self: center;">
+              <h4 style="font-size: 3vw;  color:black; font-weight: 600; text-align: center;">ABOUT</h4>
+              <br>
+              <h4 style="font-size: 2vw; font-weight:600; text-align: center;">My name is Maria Koroleva.</h4>
+              <br>
+              <h5 class="maintext">I'm a professional tattoo artist currently working in Berlin, having previously plied
+                my
+                trade in Moscow.
+                I have graduated the Art Faculty of Moscow University and specialized for 1 year in Oriental Art in
+                China.
+              </h5>
+              <h5 class="maintext">Besides tattoos I am also continuously producing artwork available on both original
+                canvas, and prints on
+                a variety of other accessories.</h5>
+              <h5 class="maintext"> To discuss either a commissioned art or to book a tattoo appointment please contact
+                me
+                via the
+                contact <a class="mainlink" href="#contact">form below</a>, on <a class="mainlink"
+                  href="https://www.facebook.com/malimalia221/" target="_blank" rel="noopener noreferrer">facebook</a>
+                or
+                in
+                <a class="mainlink" href="https://www.instagram.com/malimalia/" target="_blank"
+                  rel="noopener noreferrer">instagram</a>.
+              </h5>
+            </div>
+          </div>
+          <div class="col-12 col-md-6" style="padding:0; align-items: center;">
+            <img src="./assets/images/work.webp" alt="Maria at work" style=" width: 100%" />
+          </div>
+        </div>
+        <div class="jumbotron" style="display: flex; justify-content: center; margin-top:8vh; width: 100%">
+          <iframe width="940" height="440" src="https://www.youtube.com/embed/J-PQl0XIEaQ" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <br />
+        <section id="news">
+          <h4
+            style="font-size: 3vw; color:black;font-weight: 800; font-family: brandongrotesque, sans-serif; text-align: center">
+            NEWS</h4>
+          <div class="wrap" id="blog">
+          </div>
+        </section>
+        <br />
+        <section id="tatoos">
           <h4
             style="font-size: 3vw; color:black;font-weight: 800; font-family: brandongrotesque, sans-serif; text-align: center">
             TATTOO GALLERY</h4>
-          <div class="horizontal-scroll" id="tatoosGallery">
-          </div>
-        </div>
-        <div style="  width: 100%; margin-top: 7vh;">
-          <div class="row" style=" display: flex; justify-content: center; margin:auto; width: 95%">
-            <div class="col-12 col-md-6" style="text-align: center; font-family: brandongrotesque, sans-serif;">
-              <span style="font-size: 4vw;color:black; font-weight: 900;">HOW TO TAKE CARE FOR YOUR&nbsp;NEW TATTOO</span>
-
+          <div class="external">
+            <div class="horizontal-scroll" id="tatoosGallery">
             </div>
-            <div class="col-12 col-md-6" style="text-align: left; font-family: brandongrotesque, sans-serif;">
-              <ul class="maintext">
-                <li>When your tattoo is done, it will be creamed and covered with the plastic wrap. </li>
-                <li>Keep the dressing on for no more then 3 - 4 hours. </li>
-                <li>After this time, you can remove the bandage.</li>
-                <li>Wash your hands first with warm water and soap.</li>
-                <li>Then gently wash the tattoo with fragrance-free soap and water.</li>
-                <li>Pat your skin dry with a soft paper towel. Apply a small amount of Bepanthen cream (better Bepanthen
-                  antiseptic) or any other Tattoo Aftercare Cream to the tattoo. You can keep the bandage off at this
-                  point
-                  to let your skin breathe.</li>
-                <li>But it is better to wrap it again for the first night, to protect it from bacteria and prevent
-                  rubbing
-                  on your clothes. </li>
-                <li>The next day or two I would also recommend to wash your tattoo 3 - 4 times a day with warm water and
-                  soap and apply tattoo aftercare cream, wear the bandage and don't forget to change it every 3 hours.
+          </div>
+          <div style="  width: 100%; margin-top: 7vh;">
+            <div class="row" style=" display: flex; justify-content: center; margin:auto; width: 95%">
+              <div class="col-12 col-md-6" style="text-align: center; font-family: brandongrotesque, sans-serif;">
+                <span style="font-size: 4vw;color:black; font-weight: 900;">HOW TO TAKE CARE FOR YOUR&nbsp;NEW
+                  TATTOO</span>
+
+              </div>
+              <div class="col-12 col-md-6" style="text-align: left; font-family: brandongrotesque, sans-serif;">
+                <ul class="maintext">
+                  <li>When your tattoo is done, it will be creamed and covered with the plastic wrap. </li>
+                  <li>Keep the dressing on for no more then 3 - 4 hours. </li>
+                  <li>After this time, you can remove the bandage.</li>
+                  <li>Wash your hands first with warm water and soap.</li>
+                  <li>Then gently wash the tattoo with fragrance-free soap and water.</li>
+                  <li>Pat your skin dry with a soft paper towel. Apply a small amount of Bepanthen cream (better
+                    Bepanthen
+                    antiseptic) or any other Tattoo Aftercare Cream to the tattoo. You can keep the bandage off at this
+                    point
+                    to let your skin breathe.</li>
+                  <li>But it is better to wrap it again for the first night, to protect it from bacteria and prevent
+                    rubbing
+                    on your clothes. </li>
+                  <li>The next day or two I would also recommend to wash your tattoo 3 - 4 times a day with warm water
+                    and
+                    soap and apply tattoo aftercare cream, wear the bandage and don't forget to change it every 3 hours.
+                  </li>
+                </ul>
+                <dl class="maintext">
+                  <dt>While your tattoo heals, you should:</dt>
+                  <dd>- Wear sun-protective clothing whenever you go outside.</dd>
+                  <dt>You shouldn’t:</dt>
+                  <dd>- Scratch or pick at the tattoo.</dd>
+                  <dd>- Go swimming or immerse your body in water (showers are fine).</dd>
+                  <dd>- Go to Sauna.</dd>
+                  <dd>- Wear tight clothing over the tattoo.</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </section>
+        <br />
+        <section id="artworks">
+          <h4
+            style="font-size: 3vw; color:black;font-weight: 800; font-family: brandongrotesque, sans-serif; text-align: center">
+            ART GALLERY</h4>
+          <div class="external">
+            <div class="carousel" id="artworksGallery" onscroll="removeAnime(event)"></div>
+          </div>
+        </section>
+        <br />
+        <section id="contact">
+          <div class="row" style=" margin-top:3vh; width: 100%; margin:0; padding: 0;">
+            <div class="col-12 col-md-6" style="margin:0; padding: 0;">
+              <h4
+                style="font-size: 3vw; color:black;font-weight: 800; font-family: brandongrotesque, sans-serif; text-align: center">
+                FOR APPOINTMENTS</h4>
+              <h5 class="maintext" style="text-align: center">Kastanienallee 23, 10435 Berlin, Germany</h5>
+              <h5 class="maintext" style="text-align: center">malimalia221@gmail.com</h5>
+              <h5 class="maintext" style="text-align: center">030 44041588</h5>
+              <ul id="socialMenu" style="display: flex;  justify-content:center; font-size: 5vh; width: 100%">
+                <li><a id="map" href="https://www.google.com/maps?cid=3475957935708065149" target="_blank"
+                    rel="noopener noreferrer" title="Find on Google Maps">
+                    <i class="fas fa-map-marked-alt text-dark m-2"></i></a>
+                </li>
+                <li><a id="instagram" class="link" href="https://www.instagram.com/malimalia/" target="_blank"
+                    rel="noopener noreferrer" title="Follow on Instagram">
+                    <i class="fab fa-instagram text-dark m-2"></i></a>
+                </li>
+                <li>
+                  <a id="facebook" class="link" href="https://www.facebook.com/malimalia221/" target="_blank"
+                    rel="noopener noreferrer" title="Follow on Facebook">
+                    <i class="fab fa-facebook-f text-dark m-2"></i></a>
                 </li>
               </ul>
-              <dl class="maintext">
-                <dt>While your tattoo heals, you should:</dt>
-                <dd>- Wear sun-protective clothing whenever you go outside.</dd>
-                <dt>You shouldn’t:</dt>
-                <dd>- Scratch or pick at the tattoo.</dd>
-                <dd>- Go swimming or immerse your body in water (showers are fine).</dd>
-                <dd>- Go to Sauna.</dd>
-                <dd>- Wear tight clothing over the tattoo.</dd>
-              </dl>
+
             </div>
-          </div>
-        </div>
-      </section>
-      <br />
-      <section id="artworks">
-        <h4
-          style="font-size: 3vw; color:black;font-weight: 800; font-family: brandongrotesque, sans-serif; text-align: center">
-          ART GALLERY</h4>
-        <div class="external">
-          <div class="carousel" id="artworksGallery" onscroll="removeAnime(event)"></div>
-        </div>
-      </section>
-      <br />
-      <section id="contact">
-        <div class="row" style=" margin-top:3vh; width: 100%; margin:0; padding: 0;">
-          <div class="col-12 col-md-6" style="margin:0; padding: 0;">
-            <h4
-              style="font-size: 3vw; color:black;font-weight: 800; font-family: brandongrotesque, sans-serif; text-align: center">
-              FOR APPOINTMENTS</h4>
-            <h5 class="maintext" style="text-align: center">Kastanienallee 23, 10435 Berlin, Germany</h5>
-            <h5 class="maintext" style="text-align: center">malimalia221@gmail.com</h5>
-            <h5 class="maintext" style="text-align: center">030 44041588</h5>
-            <ul id="socialMenu" style="display: flex;  justify-content:center; font-size: 5vh; width: 100%">
-              <li><a id="map" href="https://www.google.com/maps?cid=3475957935708065149" target="_blank"
-                  rel="noopener noreferrer" title="Find on Google Maps">
-                  <i class="fas fa-map-marked-alt text-dark m-2"></i></a>
-              </li>
-              <li><a id="instagram" class="link" href="https://www.instagram.com/malimalia/" target="_blank"
-                  rel="noopener noreferrer" title="Follow on Instagram">
-                  <i class="fab fa-instagram text-dark m-2"></i></a>
-              </li>
-              <li>
-                <a id="facebook" class="link" href="https://www.facebook.com/malimalia221/" target="_blank"
-                  rel="noopener noreferrer" title="Follow on Facebook">
-                  <i class="fab fa-facebook-f text-dark m-2"></i></a>
-              </li>
-            </ul>
+            <div class="col-12 col-md-6" style="margin:0; padding: 0;">
 
-          </div>
-          <div class="col-12 col-md-6" style="margin:0; padding: 0;">
+              <!-- <form action=".assets/php/emailform.php" method="post" style="width:70%;margin:auto"> -->
 
-            <!-- <form action=".assets/php/emailform.php" method="post" style="width:70%;margin:auto"> -->
+              <form onsubmit="emailSend(event)" method="post"
+                style="display:flexbox; justify-content: space-around; align-content: stretch; align-items: flex-start; overflow: hidden; width:100%">
+                <!-- <form action="https://www.time-dance.com/emailform.php" method="post"> -->
+                <!-- <form action="https://www.nicholaslamonaco.com/mashasite/emailform.php" method="post">   -->
 
-            <form onsubmit="emailSend(event)" method="post"
-              style="display:flexbox; justify-content: space-around; align-content: stretch; align-items: flex-start; overflow: hidden; width:100%">
-              <!-- <form action="https://www.time-dance.com/emailform.php" method="post"> -->
-              <!-- <form action="https://www.nicholaslamonaco.com/mashasite/emailform.php" method="post">   -->
+                <input class="form-input" type="text" id="first-name" placeholder="First Name"
+                  style="width:48%; text-align:left; height: 5vh; font-family: brandongrotesque, sans-serif;">
 
-              <input class="form-input" type="text" id="first-name" placeholder="First Name"
-                style="width:48%; text-align:left; height: 5vh; font-family: brandongrotesque, sans-serif;">
+                <input class="form-input" type="text" id="last-name" placeholder="Last Name"
+                  style="width: 48%; text-align:left;height: 5vh; font-family: brandongrotesque, sans-serif;">
+                <textarea class="form-input" rows="3" id="address" style="width:97%; margin-top: 5px;"
+                  placeholder="Address" required></textarea>
+                <input type="email" id="email" placeholder="Email" style="width:48%; text-align:left;height: 5vh;  font-family: brandongrotesque, sans-serif; font-family: 'brandongrotesque';
+                font-size: 1.5vw; padding-left:10px" required>
+                <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone" style="width:48%; text-align:left; height: 5vh;  font-family: brandongrotesque, sans-serif; font-family: 'brandongrotesque';
+                font-size: 1.5vw; padding-left:10px">
 
-              <input class="form-input" type="text" id="last-name" placeholder="Last Name"
-                style="width: 48%; text-align:left;height: 5vh; font-family: brandongrotesque, sans-serif;">
-              <textarea class="form-input" rows="3" id="address" style="width:97%; margin-top: 5px;"
-                placeholder="Address" required></textarea>
-              <input type="email" id="email" placeholder="Email"
-                style="width:48%; text-align:left;height: 5vh;  font-family: brandongrotesque, sans-serif;" required>
-              <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone"
-                style="width:48%; text-align:left; height: 5vh;  font-family: brandongrotesque, sans-serif;">
+                <textarea class="form-input" rows="5" id="message" style="width:97%; margin-top: 5px;"
+                  placeholder="Type your message here..." required></textarea>
+                <input id="sendto" type="text" name="to" style="display:none">
 
-              <textarea class="form-input" rows="5" id="message" style="width:97%; margin-top: 5px;"
-                placeholder="Type your message here..." required></textarea>
-              <input id="sendto" type="text" name="to" style="display:none">
-
-              <button type="submit" name="submit" value="Submit" class="transparentBtn" style="margin-left:42%">
-                <!-- <button type="submit" name="submit" value="Submit" style="background-color: transparent; color: transparent; border:transparent">   -->
-                <div class="liqudButton">
-                  <span class="btnText">Submit</span>
-                  <div class="blurred">
-                    <span></span><span></span>
+                <button type="submit" name="submit" value="Submit" class="transparentBtn" style="margin-left:42%">
+                  <!-- <button type="submit" name="submit" value="Submit" style="background-color: transparent; color: transparent; border:transparent">   -->
+                  <div class="liqudButton">
+                    <span class="btnText">Submit</span>
+                    <div class="blurred">
+                      <span></span><span></span>
+                    </div>
                   </div>
-                </div>
-              </button>
-              <br>
-              <br>
-            </form>
+                </button>
+                <br>
+                <br>
+              </form>
 
 
-          </div>
-      </section>
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog" style="height:100vh; width:100vw; padding:0; margin:0">
+            </div>
+        </section>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog" style="height:100vh; width:100vw; padding:0; margin:0">
 
-          <!-- Modal content-->
-          <div class="modal-content" style="height:100vh; width:100vw; ">
+            <!-- Modal content-->
+            <div class="modal-content" style="height:100vh; width:100vw; ">
 
-            <div class="content">
-              <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
-              <nav>
-                <a href="#" class="main-nav prev" data-nav="previous"><button
-                    class="mainBtn">Prev</button><span></span></a>
-                <a href="#" class="main-nav next" data-nav="next"><button class="mainBtn">Next</button>
-                  <span></span></a>
-              </nav>
-              <span class="notice" onclick="location.reload()">Close &times;</span>
+              <div class="content">
+                <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+                <nav>
+                  <a href="#" class="main-nav prev" data-nav="previous"><button
+                      class="mainBtn">Prev</button><span></span></a>
+                  <a href="#" class="main-nav next" data-nav="next"><button class="mainBtn">Next</button>
+                    <span></span></a>
+                </nav>
+                <span class="notice" onclick="location.reload()">Close &times;</span>
+              </div>
+
+
+
             </div>
 
-
-
           </div>
-
         </div>
       </div>
     </main>
+    <footer class="footerClass">
+      &copy; 2019-2021 by Maria Koroleva, Sergey Bolotnikov
+    </footer>
   </div>
 
   <svg>
