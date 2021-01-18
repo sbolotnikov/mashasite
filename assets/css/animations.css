@@ -1,0 +1,122 @@
+#head2{
+    stroke-dasharray: 1864;
+    stroke-dashoffset: 1864;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s ;
+}
+#wisk1{
+    stroke-dasharray: 116.5;
+    stroke-dashoffset: 116.5;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s ; 
+
+}
+#wisk2{
+    stroke-dasharray: 151;
+    stroke-dashoffset: 151;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s ; 
+
+}
+#wisk3{
+    stroke-dasharray: 197;
+    stroke-dashoffset: 197;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s ; 
+
+}
+#wisk4{
+    stroke-dasharray: 298;
+    stroke-dashoffset: 298;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s; 
+
+}
+#wisk5{
+    stroke-dasharray: 211;
+    stroke-dashoffset: 211;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s ; 
+
+}
+#wisk6{
+    stroke-dasharray: 421;
+    stroke-dashoffset: 421;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s ; 
+
+}
+#wisk7{
+    stroke-dasharray: 575;
+    stroke-dashoffset: 575;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s ; 
+
+}
+#wisk8{
+    stroke-dasharray: 503.7;
+    stroke-dashoffset: 503.7;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s ; 
+
+}
+#wisk9{
+    stroke-dasharray: 119;
+    stroke-dashoffset: 119;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s ; 
+
+}
+#wisk10{
+    stroke-dasharray: 140;
+    stroke-dashoffset: 140;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s ; 
+
+}
+#wisk11{
+    stroke-dasharray: 226.7;
+    stroke-dashoffset: 226.7;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s ; 
+
+}
+#wiskfat{
+    stroke-dasharray: 384;
+    stroke-dashoffset: 384;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s ; 
+
+}
+#eye1{
+    stroke-dasharray: 49.3;
+    stroke-dashoffset: 49.3;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s ; 
+
+}
+#eye2{
+    stroke-dasharray: 214;
+    stroke-dashoffset: 214;
+    animation-direction: alternate;
+    animation: tatooAnim 8s linear forwards infinite .5s ; 
+
+}
+@keyframes tatooAnim{
+    to {
+        stroke-dashoffset: 0;
+        stroke-width:3;
+        
+    }
+}
+/* @keyframes tatooAnimErase{
+    to {
+        stroke-dashoffset: 0;
+        stroke-width:10;
+        stroke:transparent
+    }
+} */
+
+#cursor{
+    transform-origin:50% 50%;
+}

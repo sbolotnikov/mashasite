@@ -71,10 +71,8 @@ function startHtml() {
     document.querySelector("#logoStart").style.width=`${proportion*100}vw`;
     document.querySelector("#logoStart").style.left=`${Math.floor(windWidth*(1-proportion)/2-10)}px`;
     document.querySelector("#logoStart").style.top=`${-Math.floor(windHeight/2+hHeader-(windWidth*proportion/461*311)/2)}px`;
-    // gsap.timeline()
-    // .from("#text1", {opacity:0})
+    
     gsap.timeline({delay:8})
-    // .to("#logo", {duration:1,rotationY:360,transformOrigin:"50% 50%"})
     .to("#text1", {duration:.1,x:-300,opacity:0})
     .to("#text1", {duration:1,ease:'ease',x:0, opacity:1})
     
@@ -101,8 +99,22 @@ function startHtml() {
     .to("#logoStart", {duration:2,rotationY:360,transformOrigin:"50% 50%",opacity:0})
     gsap.timeline({ delay:12}).to("header",{duration:2,opacity:1})
     gsap.timeline({ delay:12}).to("#mainSite",{duration:3,opacity:1})
-    
 
+    console.log('#head2 ', document.querySelector('#head2').getTotalLength())
+    console.log('#wisk1 ', document.querySelector('#wisk1').getTotalLength()) 
+    console.log('#wisk2 ', document.querySelector('#wisk2').getTotalLength())
+    console.log('#wisk3 ', document.querySelector('#wisk3').getTotalLength()) 
+    console.log('#wisk4 ', document.querySelector('#wisk4').getTotalLength()) 
+    console.log('#wisk5 ', document.querySelector('#wisk5').getTotalLength())
+    console.log('#wisk6 ', document.querySelector('#wisk6').getTotalLength())
+    console.log('#wisk7 ', document.querySelector('#wisk7').getTotalLength()) 
+    console.log('#wisk8 ', document.querySelector('#wisk8').getTotalLength()) 
+    console.log('#wisk9 ', document.querySelector('#wisk9').getTotalLength())
+    console.log('#wisk10 ', document.querySelector('#wisk10').getTotalLength())
+    console.log('#wisk11 ', document.querySelector('#wisk11').getTotalLength())
+    console.log('#wiskfat ', document.querySelector('#wiskfat').getTotalLength())
+    console.log('#eye1 ', document.querySelector('#eye1').getTotalLength())
+    console.log('#eye2 ', document.querySelector('#eye2').getTotalLength())
 };
 
 function fillBlog() {
