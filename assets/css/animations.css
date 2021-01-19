@@ -92,112 +92,105 @@
     stroke-dasharray: 1864;
     stroke-dashoffset: 1864;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s ;
+    animation: logoAnim 8s linear forwards infinite 0.7s ;
 }
 #wisk1{
     stroke-dasharray: 116.5;
     stroke-dashoffset: 116.5;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 
 }
 #wisk2{
     stroke-dasharray: 151;
     stroke-dashoffset: 151;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 
 }
 #wisk3{
     stroke-dasharray: 197;
     stroke-dashoffset: 197;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 
 }
 #wisk4{
     stroke-dasharray: 298;
     stroke-dashoffset: 298;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s; 
+    animation: logoAnim 8s linear forwards infinite 0.7s; 
 
 }
 #wisk5{
     stroke-dasharray: 211;
     stroke-dashoffset: 211;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 
 }
 #wisk6{
     stroke-dasharray: 421;
     stroke-dashoffset: 421;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 
 }
 #wisk7{
     stroke-dasharray: 575;
     stroke-dashoffset: 575;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 
 }
 #wisk8{
     stroke-dasharray: 503.7;
     stroke-dashoffset: 503.7;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 
 }
 #wisk9{
     stroke-dasharray: 119;
     stroke-dashoffset: 119;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 
 }
 #wisk10{
     stroke-dasharray: 140;
     stroke-dashoffset: 140;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 
 }
 #wisk11{
     stroke-dasharray: 226.7;
     stroke-dashoffset: 226.7;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 
 }
 #wiskfat{
     stroke-dasharray: 384;
     stroke-dashoffset: 384;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 
 }
 #eye1{
     stroke-dasharray: 49.3;
     stroke-dashoffset: 49.3;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 
 }
 #eye2{
     stroke-dasharray: 214;
     stroke-dashoffset: 214;
     animation-direction: alternate;
-    animation: tatooAnim 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 
-}
-@keyframes tatooAnim{
-    to {
-        stroke-dashoffset: 0;
-        stroke-width:3;
-        
-    }
 }
 
 
@@ -206,108 +199,102 @@
     stroke-dasharray: 226;
     stroke-dashoffset: 226;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #earRing2{
     stroke-dasharray: 105;
     stroke-dashoffset: 105;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #mouth{
     stroke-dasharray: 263;
     stroke-dashoffset: 263;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #nose{
     stroke-dasharray: 98.4;
     stroke-dashoffset: 98.4;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #nose1{
     stroke-dasharray: 191;
     stroke-dashoffset: 191;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #rightPuple{
     stroke-dasharray: 17;
     stroke-dashoffset: 17;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #rightEye{
     stroke-dasharray: 707;
     stroke-dashoffset: 707;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #leftPuple{
     stroke-dasharray: 16;
     stroke-dashoffset: 16;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #leftEye{
     stroke-dasharray: 433;
     stroke-dashoffset: 433;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #rightPuple{
     stroke-dasharray: 17;
     stroke-dashoffset: 17;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #face{
     stroke-dasharray: 1513;
     stroke-dashoffset: 1513;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #hair{
     stroke-dasharray: 1505;
     stroke-dashoffset: 1505;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #hair1{
     stroke-dasharray: 211;
     stroke-dashoffset: 211;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #hair2{
     stroke-dasharray: 778;
     stroke-dashoffset: 778;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #hair3{
     stroke-dasharray: 363;
     stroke-dashoffset: 363;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #hair4{
     stroke-dasharray: 789;
     stroke-dashoffset: 789;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
 #hair5{
     stroke-dasharray: 490;
     stroke-dashoffset: 490;
     animation-direction: alternate;
-    animation: tatooAnim2 8s linear forwards infinite 0.7s ; 
+    animation: logoAnim 8s linear forwards infinite 0.7s ; 
 }
-@keyframes tatooAnim2{
-    to {
-        stroke-dashoffset: 0;
-        stroke-width:1;
-        
-    }
-}
+
