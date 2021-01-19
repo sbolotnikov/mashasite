@@ -3,37 +3,37 @@
 #wing3{
     stroke-dasharray: 340;
     stroke-dashoffset: 340;
-    animation: logoAnim .5s ease forwards 2s; 
+    animation: logoAnim .5s ease forwards .5s; 
 }
 #wing2{
     stroke-dasharray: 372;
     stroke-dashoffset: 372;
-    animation: logoAnim .5s ease forwards 2.5s; 
+    animation: logoAnim .5s ease forwards 1s; 
 }
 #wing1{
     stroke-dasharray: 371;
     stroke-dashoffset: 371;
-    animation: logoAnim .5s ease forwards 3s; 
+    animation: logoAnim .5s ease forwards 1.5s; 
 }
 #wing3_2{
     stroke-dasharray: 340;
     stroke-dashoffset: 340;
-    animation: logoAnim .5s ease forwards 3.5s; 
+    animation: logoAnim .5s ease forwards 2s; 
 }
 #wing2_2{
-    stroke-dasharray: 372;
-    stroke-dashoffset: 372;
-    animation: logoAnim .5s ease forwards 4s; 
+    stroke-dasharray: 374;
+    stroke-dashoffset: 374;
+    animation: logoAnim .5s ease forwards 2.5s; 
 }
 #wing1_2{
     stroke-dasharray: 371;
     stroke-dashoffset: 371;
-    animation: logoAnim .5s ease forwards 4.5s; 
+    animation: logoAnim .5s ease forwards 3s; 
 }
 #crown{
     stroke-dasharray: 393;
     stroke-dashoffset: 393;
-    animation: logoAnim 1.5s ease forwards 5.5s; 
+    animation: logoAnim 1.5s ease forwards 3.5s; 
 }
 #head{
     stroke-dasharray: 497;
@@ -45,7 +45,7 @@
     stroke-dashoffset: 145;
     animation-name: logoAnim, wink;
     animation-duration: .5s, 1s;
-    animation-delay: 5s, 10s;
+    animation-delay: 5s, 9s;
     animation-fill-mode: forwards, forwards;
     transform-origin: 50% 50%;
 }
@@ -70,7 +70,7 @@
 #logo{
     animation-name: spin360;
     animation-duration: 2s;
-    animation-delay: 7s;
+    animation-delay: 6s;
     animation-fill-mode: forwards;
     transform-origin: 50% 50%;
 }
@@ -88,6 +88,47 @@
 
 
 /* cat animation */
+#catswing{
+    position:relative;
+    animation-name: swing;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    transform-origin: 50% 50%;
+}
+@keyframes swing {
+    0% {
+        transform: skew(0deg,0deg);
+        
+    }
+    12.5% {
+        transform: skew(-5deg,-5deg);
+    }
+    25% {
+        transform: skew(-7deg,0deg);
+    }
+    37.5% {
+        transform: skew(-5deg,5deg);
+    }
+    50% {
+        transform: skew(0deg,7deg);
+      }  
+    62.5% {
+        transform: skew(5deg,5deg);
+    }     
+    75% {
+        transform: skew(7deg,0deg);
+    }
+    87.5% {
+        transform: skew(5deg,-5deg);
+    }  
+    100% {
+        transform: skew(0deg,0deg);
+    }
+  }
+
+
 #head2{
     stroke-dasharray: 1864;
     stroke-dashoffset: 1864;
@@ -195,6 +236,16 @@
 
 
 /* prettyGirl animation */
+#prettyGirlSwing{
+    position:relative;
+    animation-name: swing;
+    animation-duration: 8s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    transform-origin: 50% 50%;
+}
 #earRing1{
     stroke-dasharray: 226;
     stroke-dashoffset: 226;

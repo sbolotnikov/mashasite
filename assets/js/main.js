@@ -66,17 +66,17 @@ function startHtml() {
     if (windWidth <= 768)  proportion=.6;
     document.querySelector("#brand").style.width=`${(proportion-.2)*100}vw`;
     var hHeader=document.querySelector("#header1").offsetHeight;
-    console.log("header height");
-    console.log(hHeader);
+    // console.log("header height");
+    // console.log(hHeader);
     document.querySelector("#logoStart").style.width=`${proportion*100}vw`;
     document.querySelector("#logoStart").style.left=`${Math.floor(windWidth*(1-proportion)/2-10)}px`;
     document.querySelector("#logoStart").style.top=`${-Math.floor(windHeight/2+hHeader-(windWidth*proportion/461*311)/2)}px`;
     
-    gsap.timeline({delay:8})
+    gsap.timeline({delay:7})
     .to("#text1", {duration:.1,x:-300,opacity:0})
     .to("#text1", {duration:1,ease:'ease',x:0, opacity:1})
     
-
+// wings flap
     gsap.timeline({repeat:-1, delay:10})
     .to("#leftWing", {duration:.5,transformOrigin:"0% 80%",rotate:-9,ease: "back"})
     .to("#leftWing", {duration:.5,transformOrigin:"0% 80%",rotate:0,ease: "back"})
@@ -84,11 +84,11 @@ function startHtml() {
     gsap.timeline({repeat:-1, delay:10})
     .to("#rightWing", {duration:.5,transformOrigin:"100% 80%",rotate:9,ease: "back"})
     .to("#rightWing", {duration:.5,transformOrigin:"100% 80%",rotate:0,ease: "back"})
-
+// crown moves
     gsap.timeline({repeat:-1, delay:10})
     .to("#crown", {duration:.8,transformOrigin:"50% 100%",rotate:3,ease: "back"})
     .to("#crown", {duration:.8,transformOrigin:"50% 100%",rotate:-3,ease: "back"})
-
+// text swings
     gsap.timeline({repeat:-1, delay:10})
     .to("#text1", {duration:1,transformOrigin:"center top",rotate:1.5,ease: "back"})
     .to("#text1", {duration:1,transformOrigin:"center top",rotate:-1.5,ease: "back"})
@@ -100,22 +100,22 @@ function startHtml() {
     gsap.timeline({ delay:12}).to("header",{duration:2,opacity:1})
     gsap.timeline({ delay:12}).to("#mainSite",{duration:3,opacity:1})
 
-    console.log('#earRing1 ', document.querySelector('#earRing1').getTotalLength())
-    console.log('#earRing2 ', document.querySelector('#earRing2').getTotalLength()) 
-    console.log('#mouth ', document.querySelector('#mouth').getTotalLength())
-    console.log('#nose ', document.querySelector('#nose').getTotalLength()) 
-    console.log('#nose1 ', document.querySelector('#nose1').getTotalLength()) 
-    console.log('#rightPuple ', document.querySelector('#rightPuple').getTotalLength())
-    console.log('#rightEye ', document.querySelector('#rightEye').getTotalLength())
-    console.log('#leftPuple ', document.querySelector('#leftPuple').getTotalLength()) 
-    console.log('#leftEye ', document.querySelector('#leftEye').getTotalLength()) 
-    console.log('#hair ', document.querySelector('#hair').getTotalLength())
-    console.log('#hair1 ', document.querySelector('#hair1').getTotalLength())
-    console.log('#face ', document.querySelector('#face').getTotalLength())
-    console.log('#hair2 ', document.querySelector('#hair2').getTotalLength())
-    console.log('#hair3 ', document.querySelector('#hair3').getTotalLength())
-    console.log('#hair4 ', document.querySelector('#hair4').getTotalLength())
-    console.log('#hair5 ', document.querySelector('#hair5').getTotalLength())
+    // console.log('#earRing1 ', document.querySelector('#earRing1').getTotalLength())
+    // console.log('#earRing2 ', document.querySelector('#earRing2').getTotalLength()) 
+    // console.log('#mouth ', document.querySelector('#mouth').getTotalLength())
+    // console.log('#nose ', document.querySelector('#nose').getTotalLength()) 
+    // console.log('#nose1 ', document.querySelector('#nose1').getTotalLength()) 
+    // console.log('#rightPuple ', document.querySelector('#rightPuple').getTotalLength())
+    // console.log('#rightEye ', document.querySelector('#rightEye').getTotalLength())
+    // console.log('#leftPuple ', document.querySelector('#leftPuple').getTotalLength()) 
+    // console.log('#leftEye ', document.querySelector('#leftEye').getTotalLength()) 
+    // console.log('#hair ', document.querySelector('#hair').getTotalLength())
+    // console.log('#hair1 ', document.querySelector('#hair1').getTotalLength())
+    // console.log('#face ', document.querySelector('#face').getTotalLength())
+    // console.log('#hair2 ', document.querySelector('#hair2').getTotalLength())
+    // console.log('#hair3 ', document.querySelector('#hair3').getTotalLength())
+    // console.log('#hair4 ', document.querySelector('#hair4').getTotalLength())
+    // console.log('#hair5 ', document.querySelector('#hair5').getTotalLength())
 };
 function fillBlog() {
     let parentElement = document.querySelector('#blog');
