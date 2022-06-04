@@ -221,9 +221,9 @@ ul#socialMenu li{
     height:65vh;
 }
 .continue-scroll{
-    animation: scroll 10s infinite;
+    animation: scroll 20s infinite;
     animation-direction: alternate;
-    animation-timing-function:linear;
+    animation-timing-function:ease-in-out;
   
 }
 
