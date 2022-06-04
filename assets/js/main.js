@@ -107,7 +107,7 @@ function startHtml() {
     .to("#logoStart", {duration:3,scale:.4,y:-Math.floor(windHeight/2+hHeader-(windWidth*proportion/461*311)/2)})
     .to("#logoStart", {duration:2,rotationY:360,transformOrigin:"50% 50%",opacity:0})
     gsap.timeline({ delay:7}).to("header",{duration:.5,opacity:1})
-    gsap.timeline({ delay:7}).to("#mainSite",{duration:.5,opacity:1})
+    gsap.timeline({ delay:0}).to("#mainSite",{duration:.5,opacity:1})
 
     // console.log('#earRing1 ', document.querySelector('#earRing1').getTotalLength())
     // console.log('#earRing2 ', document.querySelector('#earRing2').getTotalLength()) 
