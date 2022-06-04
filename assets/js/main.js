@@ -81,33 +81,33 @@ function startHtml() {
     document.querySelector("#logoStart").style.left=`${Math.floor(windWidth*(1-proportion)/2-10)}px`;
     document.querySelector("#logoStart").style.top=`${-Math.floor(windHeight/2+hHeader-(windWidth*proportion/461*311)/2)}px`;
     
-    gsap.timeline({delay:7})
+    gsap.timeline({delay:2.5})
     .to("#text1", {duration:.1,x:-300,opacity:0})
-    .to("#text1", {duration:1,ease:'ease',x:0, opacity:1})
+    .to("#text1", {duration:.5,ease:'ease',x:0, opacity:1})
     
 // wings flap
-    gsap.timeline({repeat:-1, delay:10})
+    gsap.timeline({repeat:-1, delay:5})
     .to("#leftWing", {duration:.5,transformOrigin:"0% 80%",rotate:-9,ease: "back"})
     .to("#leftWing", {duration:.5,transformOrigin:"0% 80%",rotate:0,ease: "back"})
 
-    gsap.timeline({repeat:-1, delay:10})
+    gsap.timeline({repeat:-1, delay:5})
     .to("#rightWing", {duration:.5,transformOrigin:"100% 80%",rotate:9,ease: "back"})
     .to("#rightWing", {duration:.5,transformOrigin:"100% 80%",rotate:0,ease: "back"})
 // crown moves
-    gsap.timeline({repeat:-1, delay:10})
+    gsap.timeline({repeat:-1, delay:5})
     .to("#crown", {duration:.8,transformOrigin:"50% 100%",rotate:3,ease: "back"})
     .to("#crown", {duration:.8,transformOrigin:"50% 100%",rotate:-3,ease: "back"})
 // text swings
-    gsap.timeline({repeat:-1, delay:10})
+    gsap.timeline({repeat:-1, delay:5})
     .to("#text1", {duration:1,transformOrigin:"center top",rotate:1.5,ease: "back"})
     .to("#text1", {duration:1,transformOrigin:"center top",rotate:-1.5,ease: "back"})
 
 
-    gsap.timeline({ delay:10}) 
+    gsap.timeline({ delay:5}) 
     .to("#logoStart", {duration:3,scale:.4,y:-Math.floor(windHeight/2+hHeader-(windWidth*proportion/461*311)/2)})
     .to("#logoStart", {duration:2,rotationY:360,transformOrigin:"50% 50%",opacity:0})
-    gsap.timeline({ delay:12}).to("header",{duration:2,opacity:1})
-    gsap.timeline({ delay:12}).to("#mainSite",{duration:3,opacity:1})
+    gsap.timeline({ delay:7}).to("header",{duration:.5,opacity:1})
+    gsap.timeline({ delay:7}).to("#mainSite",{duration:.5,opacity:1})
 
     // console.log('#earRing1 ', document.querySelector('#earRing1').getTotalLength())
     // console.log('#earRing2 ', document.querySelector('#earRing2').getTotalLength()) 

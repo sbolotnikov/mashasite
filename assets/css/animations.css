@@ -3,49 +3,49 @@
 #wing3{
     stroke-dasharray: 340;
     stroke-dashoffset: 340;
-    animation: logoAnim .5s ease forwards .5s; 
+    animation: logoAnim .25s ease forwards .25s; 
 }
 #wing2{
     stroke-dasharray: 372;
     stroke-dashoffset: 372;
-    animation: logoAnim .5s ease forwards 1s; 
+    animation: logoAnim .25s ease forwards .5s; 
 }
 #wing1{
     stroke-dasharray: 371;
     stroke-dashoffset: 371;
-    animation: logoAnim .5s ease forwards 1.5s; 
+    animation: logoAnim .25s ease forwards .75s; 
 }
 #wing3_2{
     stroke-dasharray: 340;
     stroke-dashoffset: 340;
-    animation: logoAnim .5s ease forwards 2s; 
+    animation: logoAnim .25s ease forwards 1s; 
 }
 #wing2_2{
     stroke-dasharray: 374;
     stroke-dashoffset: 374;
-    animation: logoAnim .5s ease forwards 2.5s; 
+    animation: logoAnim .25s ease forwards 1.25s; 
 }
 #wing1_2{
     stroke-dasharray: 371;
     stroke-dashoffset: 371;
-    animation: logoAnim .5s ease forwards 3s; 
+    animation: logoAnim .25s ease forwards 1.5s; 
 }
 #crown{
     stroke-dasharray: 393;
     stroke-dashoffset: 393;
-    animation: logoAnim 1.5s ease forwards 3.5s; 
+    animation: logoAnim 0.25s ease forwards 1.75s; 
 }
 #head{
     stroke-dasharray: 497;
     stroke-dashoffset: 497;
-    animation: logoAnim 1s ease forwards 4s; 
+    animation: logoAnim .25s ease forwards 2s; 
 }
 #rEye{
     stroke-dasharray: 145;
     stroke-dashoffset: 145;
     animation-name: logoAnim, wink;
-    animation-duration: .5s, 1s;
-    animation-delay: 5s, 9s;
+    animation-duration: .25s, 1s;
+    animation-delay: 2.5s, 5s;
     animation-fill-mode: forwards, forwards;
     transform-origin: 50% 50%;
 }
@@ -69,15 +69,15 @@
   }
 #logo{
     animation-name: spin360;
-    animation-duration: 2s;
-    animation-delay: 6s;
+    animation-duration: 1s;
+    animation-delay: 4s;
     animation-fill-mode: forwards;
     transform-origin: 50% 50%;
 }
 #lEye{
     stroke-dasharray: 145;
     stroke-dashoffset: 145;
-    animation: logoAnim .5s ease forwards 5.5s; 
+    animation: logoAnim .25s ease forwards 3s; 
 }
 @keyframes logoAnim{
     to {
