@@ -47,7 +47,16 @@ function startHtml() {
         fillGallery("tatoos", totalPictures, 2);
     } else {
         console.log(ua)
-        fillGallery("tatoos", totalPictures, 1);
+        rw=fillGallery("tatoos", totalPictures, 1);
+
+     
+        var cssAnimation = document.createElement('style');
+        console.log(.65*window.innerHeight)
+        console.log(rw*.65*window.innerHeight-window.innerWidth)
+        var rules = document.createTextNode(`@-webkit-keyframes scroll {0% {transform: translateX(0px);} 100% {transform: translateX(-${(rw*.65*window.innerHeight/2-window.innerWidth*.96)}px);}}`);
+        cssAnimation.appendChild(rules);
+        document.getElementsByTagName("head")[0].appendChild(cssAnimation);
+
     }
     fillGallery("artworks", totalArtworks, 0);
     if (windWidth <= 768) {
@@ -157,7 +166,7 @@ function fillBlog() {
 function fillGallery(name, picTotal, animateOrigin) {
     let childDiv, childImg;
     let node = document.querySelector('#' + name + "Gallery");
-    
+    let relativeWidth=0;
     for (let i = 1; i <= picTotal; i++) {
         childDiv = document.createElement("div");
         childImg = document.createElement('img');
@@ -181,6 +190,7 @@ function fillGallery(name, picTotal, animateOrigin) {
         // childImg.loading = 'lazy';
         childImg.setAttribute("onclick", `callModal('${name}/gallery',${i},${picTotal})`);
         childDiv.appendChild(childImg);
+        relativeWidth+=childImg.width/childImg.height;
         node.appendChild(childDiv)
     }
     if (animateOrigin === 1) {
@@ -190,6 +200,7 @@ function fillGallery(name, picTotal, animateOrigin) {
         node.classList.remove("horizontal-scroll");
         node.classList.add("carousel");
     }
+    return relativeWidth;
 }
 function removeAnime(event) {
     // event.preventDefault();

@@ -179,10 +179,17 @@ ul#socialMenu li{
     height: 1px;
 }
 .external{
-    overflow: visible;
+    overflow-x: auto;
     height: 70vh;
     width: 100vw;
 }
+.mediaScroller {
+    position: relative;
+    place-items: center;
+  
+    display: grid;
+    overflow-x: auto;
+  }
 .horizontal-scroll{
     display: flex;
     flex-direction: column;
@@ -214,13 +221,13 @@ ul#socialMenu li{
     height:65vh;
 }
 .continue-scroll{
-    animation: scroll 40s infinite;
+    animation: scroll 10s infinite;
     animation-direction: alternate;
     animation-timing-function:linear;
   
 }
 
-@keyframes scroll {
+/* @keyframes scroll {
     0% {
       transform: translateX(0vw);    
     }
@@ -228,7 +235,7 @@ ul#socialMenu li{
     100% {
       transform: translateX(-600vw);
     }
-  }
+  } */
 
 
 .image-wrapper{
