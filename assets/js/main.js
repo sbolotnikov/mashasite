@@ -1,7 +1,7 @@
 // GLOBAL VARIABLES
 var totalPictures = 39;
 var totalArtworks = 16;
-var emailToSend = "sergey@time-dance.com";
+var emailToSend = "serge.bolotnikov@gmail.com";
 // ----------------------------------------------
 
 var texts1 = [
@@ -238,7 +238,7 @@ function emailSend(event) {
         win = window.open(mailto_link2, 'emailWindow');
         if (win && win.open && !win.closed) { console.log("sent second email"); win.close(); }
     }
-    location.reload();
+    // location.reload();
 
 
 
